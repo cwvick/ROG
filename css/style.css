@@ -20,10 +20,9 @@ body {
 .container .index {
   width: 100%;
   height: 0;
-  padding-bottom: 93.5%;
-  background-image: url(../imgs/KV.jpg);
+  padding-bottom: 65.36%;
+  background-image: url(../imgs/KV_2.jpg);
   background-size: cover;
-  background-position: center center;
   position: relative;
 }
 .container .index .top {
@@ -111,7 +110,7 @@ body {
   width: 100%;
   height: 0;
   background-image: url(../imgs/screen.png);
-  padding-bottom: 51.74%;
+  padding-bottom: 51.2%;
   background-size: cover;
   position: relative;
 }
@@ -174,10 +173,10 @@ body {
 }
 .container .index .gamer {
   width: 100%;
-  height: auto;
-  clear: both;
-  color: #FFF;
+  height: 205px;
+  background: #FFF;
   border-top: #FFF 1px solid;
+  border-bottom: #FFF 1px solid;
 }
 .container .index .gamer .special {
   width: 25%;
@@ -191,7 +190,6 @@ body {
   padding-bottom: 34.71%;
   background-size: cover;
   position: relative;
-  margin-bottom: 20px;
 }
 .container .index .gamer .special .special_pic p {
   position: absolute;
@@ -199,7 +197,8 @@ body {
   top: 80%;
 }
 .container .index .gamer .special .word {
-  padding-bottom: 20px;
+  height: 50px;
+  margin: 20px;
 }
 .container .index .gamer .special .word .name {
   width: 32%;
@@ -215,16 +214,16 @@ body {
 }
 .container .index .gamer .team {
   width: 75%;
-  height: auto;
-  background: rgba(255, 255, 255, 0.3);
+  height: 0;
   float: right;
 }
 .container .index .gamer .team .team_name {
   font-weight: bold;
 }
 .container .index .gamer .team .profile {
-  width: 25%;
+  width: 22%;
   float: left;
+  margin-left: 3%;
 }
 .container .index .gamer .team .profile .pic {
   width: 40%;
@@ -241,11 +240,37 @@ body {
 }
 .container .hoarding {
   width: 100%;
-  height: 468px;
+  height: 300px;
   background: #000;
-  clear: both;
 }
-.container .news {} .container .banner {}
+.container .news {
+  width: 20%;
+  background: rgba(255, 255, 255, 0.3);
+  -moz-border-radius: 15px;
+  border-radius: 15px;
+}
+.container .banner {
+  width: 70%;
+  float: right;
+}
+.container .banner .game_logo {
+  width: 20%;
+  margin: 0 auto;
+  background-image: url(../imgs/Logo_Dota_2.png);
+  background-size: cover;
+}
+.container .banner .banner_teams {
+  width: 70%;
+  margin: 0 auto;
+}
+.container .banner .banner_teams .team_A {
+  float: left;
+  width: 40%;
+}
+.container .banner .banner_teams .team_B {
+  float: right;
+  width: 40%;
+}
 /*section*/
 
 .container .section {
@@ -543,7 +568,7 @@ body {
   width: 175px;
   height: 175px;
   overflow: hidden;
-  background: url(../imgs/btn_scrolldown.gif) no-repeat;
+  /*background: url(../imgs/BTN_scrolldown.gif) no-repeat;*/
   position: absolute;
   left: 0;
   top: 275px;
