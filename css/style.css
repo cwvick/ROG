@@ -38,18 +38,27 @@ body {
 .container .index .top .timer {
   /*width: 30%;*/
   margin: 0 auto;
-  width: 442px;
-  height: 66px;
-  overflow: hidden;
-  background-image: url(../imgs/timer.png);
+  width: 405px;
+  height: 60px;
+  /*overflow: hidden;*/
+  background: url(../imgs/timer.png) no-repeat;
+  background-size: 405px 60px;
   text-align: center;
+  position: relative;
+  padding-top: 28px;
 }
-#countdown {
+.mobile .container .index .top .timer {
+  width: 307px;
+  height: 36px;
+  background-size: 307px 36px;
+}
+/*#countdown {
   margin-top: 33px;
-}
+}*/
 .container .index .top .menu {
   min-width: 380px;
-  position: absolute;
+  position: fixed;
+  z-index: 1;
   right: 5px;
   top: 0px;
   background-image: url(../imgs/menu.png);
