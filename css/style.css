@@ -6,6 +6,8 @@ body {
   min-width: 1024px;
   max-width: 1920px;
   font-family: "square721bt", Arial;
+  position: relative;
+  height: 100%;
 }
 .contaier {
   width: 100%;
@@ -443,13 +445,36 @@ body {
   background-size: 100% auto;
 }
 /*light box*/
-
 .lightbox {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.9);
+  top: 0;
+  z-index: 2;
+}
+.lightbox-wrapper {
+  position: fixed;
+  width: 100%;
+  top: 26%;
+}
+.lightbox-container {
   width: 80%;
   margin: 0 auto;
   clear: both;
 }
-.lightbox .close {} .lightbox .title {
+.lightbox .close {
+  width: 79px;
+  height: 106px;
+  background: url(../imgs/lightbox_close.png) no-repeat;
+  overflow: hidden;
+  cursor: pointer;
+  position: fixed;
+  right: 5px;
+  top: 5px;
+  z-index: 1;
+} 
+.lightbox .title {
   font-size: 4em;
   color: #FFF;
   text-align: center;

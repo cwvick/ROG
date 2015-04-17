@@ -16,6 +16,11 @@ $(function(){
 		$('.lightbox').show();
 	});
 
+	$(document).on('click', '.lightbox .close', function(event) {
+		event.preventDefault();
+		$('.lightbox').hide();
+	});
+
 	// resize
 	$(window).resize(function() {
 	  if ( $(window).width() < 1024 ) {
