@@ -1,0 +1,43 @@
+@charset "utf-8";
+/* CSS Document */
+
+@font-face {
+  font-family: 'batman';
+	src: url('../fonts/batmfa__0.eot');/*ie*/
+	src:	
+	  local("batmfa__0"),
+	  local("BatmanForeverAltemate"),
+	  url("../fonts/batmfa__0.eot?#iefix")  format('embedded-opentype'),/*ie*/
+	  url("../fonts/batmfa__0.woff") format('woff'),
+	  url("../fonts/batmfa__0.otf")  format('opentype'),
+	  url("../fonts/batmfa__0.ttf")  format('truetype');
+	font-weight: normal;
+    font-style: normal;
+
+  }
+
+
+@font-face {
+  font-family: 'square721bt';
+  src: url('../fonts/square721bt.eot');/*ie*/
+  src:	
+	  local("Square 721 bt"),
+	  local("tt0246m"),
+	  url("../fonts/square721bt.eot?#iefix")  format('embedded-opentype'),/*ie*/
+	  url("../fonts/square721bt.woff") format('woff'),
+	  url("../fonts/square721bt.otf") format('opentype'),
+	  url("../fonts/square721bt.ttf") format('truetype');
+	font-weight: normal;
+    font-style: normal;
+  }
+  
+  
+.text_size_01 { font-family:"square721bt" , Arial; color:#FFF; font-size:0.82em; -webkit-transform : scale(0.83);-webkit-text-size-adjust:none;  display:inline-block; }
+.text_size_02 { font-family:"square721bt" , Arial; color:#FFF; font-size:1em; line-height:1.5em;}
+.text_size_03 { font-family:"square721bt" , Arial; color:#FFF; font-size:1.333em; line-height:1.5em;}
+.text_size_04 { font-family:"square721bt" , Arial; color:#FFF; font-size:1.5em; font-weight:bold; line-height:1.5em; }
+.text_size_05 { font-family:"square721bt" , Arial; color:#FFF; font-size:2em; }
+  
+
+
+
