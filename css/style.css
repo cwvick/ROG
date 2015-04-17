@@ -508,22 +508,22 @@ body {
   margin: 0 auto;
   background-image: url(../imgs/country.png);
 }
-.ACI {
+.lightbox .country .country_icon.US {
   background-position: 0 0;
 }
-.UK {
+.lightbox .country .country_icon.AU {
   background-position: -93px 0;
 }
-.TW {
+.lightbox .country .country_icon.TW {
   background-position: -186px 0;
 }
-.DE {
+.lightbox .country .country_icon.DE {
   background-position: -279px 0;
 }
-.FR {
+.lightbox .country .country_icon.FR {
   background-position: -372px 0;
 }
-.SW {
+.lightbox .country .country_icon.SW {
   background-position: -465px 0;
 }
 .lightbox .country .stroe {
@@ -538,4 +538,14 @@ body {
 }
 .lightbox .country .stroe a.name:hover {
   color: #cb1c06;
+}
+.btn_scrolldown {
+  width: 175px;
+  height: 175px;
+  overflow: hidden;
+  background: url(../imgs/btn_scrolldown.gif) no-repeat;
+  position: absolute;
+  left: 0;
+  top: 275px;
+  z-index: 1;
 }
