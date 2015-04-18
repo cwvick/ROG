@@ -1,3 +1,14 @@
+今天
+
+Zek Pan上傳了 1 個項目
+上午2:02
+CSS 樣式表
+font.css
+沒有 2015年4月19日前的活動紀錄
+已使用 21 GB (77%)
+購買額外儲存空間
+已關閉 font.css
+選擇開啟工具
 @charset "utf-8";
 /* CSS Document */
 
@@ -31,13 +42,16 @@
     font-style: normal;
   }
   
-  
-.text_size_01 { font-family:"square721bt" , Arial; color:#FFF; font-size:0.82em; -webkit-transform : scale(0.83);-webkit-text-size-adjust:none;  display:inline-block; margin-left:-8%; }
-.text_size_02 { font-family:"square721bt" , Arial; color:#FFF; font-size:1em; line-height:1.5em;}
-.text_size_03 { font-family:"square721bt" , Arial; color:#FFF; font-size:1.333em;  line-height:1.5em;}
-.text_size_04 { font-family:"square721bt" , Arial; color:#FFF; font-size:1.5em; font-weight:bold; line-height:1.5em; }
-.text_size_05 { font-family:"square721bt" , Arial; color:#FFF; font-size:2em; }
-  
-
-
-
+ @font-face {
+  font-family: 'MyriadProLight';
+  src: url('../fonts/MyriadProLight.eot');/*ie*/
+  src:	
+	  local("Square 721 bt"),
+	  local("tt0246m"),
+	  url("../fonts/MyriadProLight.eot?#iefix")  format('embedded-opentype'),/*ie*/
+	  url("../fonts/MyriadProLight.woff") format('woff'),
+	  url("../fonts/MyriadProLight.otf") format('opentype'),
+	  url("../fonts/MyriadProLight.ttf") format('truetype');
+	font-weight: normal;
+    font-style: normal;
+  }

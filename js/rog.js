@@ -23,6 +23,39 @@ $(function() {
     $('.lightbox').hide();
   });
 
+  $(document).on('click', '.movie_list li', function(event) {
+    event.preventDefault();
+    if ( !$(this).hasClass('selected') ) {
+      $('.movie_list li').removeClass('selected');
+      $(this).addClass('selected');
+
+      var video_id = $(this).data('video-id');
+      loadVideo(video_id);
+    }
+  });
+
+  var loadVideo = function(video_id) {
+    if ( !YT_player || !YT_player.getIframe() ) {
+      YT_player = new YT.Player('video_player', {
+        height: $('.screen .video').outerHeight(),
+        width: $('.screen .video').outerWidth(),
+        videoId: video_id,
+        playerVars: {
+          // 'showinfo': 0,
+          // 'controls': 0,
+          // 'modestbranding': 1,
+          // 'rel': 0
+        },
+        events: {
+          'onReady': onPlayerReady,
+          'onStateChange': onPlayerStateChange
+        }
+      });
+    } else {
+      YT_player.loadVideoById(video_id);
+    }
+  };
+
   // resize
   $(window).resize(function() {
     if ($(window).width() < 1024) {
@@ -35,6 +68,8 @@ $(function() {
     if ( YT_player ) {
       YT_player.setSize($('.screen .video').outerWidth() , $('.screen .video').outerHeight());
     }
+
+    bageHandler();
   });
 
   var setBuyLinkData = function() {
@@ -45,6 +80,24 @@ $(function() {
       console.log(data);
     });
 	};
+
+  $(window).scroll(function() {
+    bageHandler();
+  });
+
+  var bageHandler = function() {
+    var sectionA_height = $('.container .index').outerHeight();
+    var winHeight = $(window).height();
+    var scrollTop = $(window).scrollTop();
+
+    if ( sectionA_height <= winHeight + scrollTop ) {
+      $('.box-bage').addClass('stop');
+    } else {
+      $('.box-bage').removeClass('stop');
+    }
+  };
+
+  bageHandler();
 
 });
 

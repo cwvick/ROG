@@ -29,34 +29,39 @@ body {
 /*IIP*/
 
 .patten{
-	
-	position:absolute;
-	right:0;
-	bottom:0;
-	z-index:99;
-	margin-bottom:-1px;
-	}
+  position:absolute;
+  right:0;
+  bottom:0;
+  z-index:99;
+  margin-bottom:-1px;
+  }
 .box-bage{
-	position:absolute;
-	right:0;
-	bottom:0;
-	z-index:100;
-	padding:10px;
-	}
+  position:fixed;
+  right:0;
+  bottom:0;
+  z-index:100;
+  padding:10px;
+  color: #000;
+  }
+.box-bage.stop {
+  position: absolute;
+  color: #fff;
+}
 .bage{
-	margin-left:60%;
-	}
+  margin-left:60%;
+  }
 .bage-word{
-	color:white;
-	font-family: 'square721bt';
-	text-align:right;
-	margin-top:5px;
-	line-height:18px;
-	}
-	
+  /*color:white;*/
+  font-family: 'square721bt';
+  /*font-family: 'MyriadProLight';*/
+  text-align:right;
+  margin-top:5px;
+  line-height:18px;
+  }
+  
 .bage-word p{
-	font-size:16px;
-	}
+  font-size:16px;
+  }
 /**/
 
 .container .index .ROG_LOGO{
@@ -200,6 +205,16 @@ body {
 .container .index .movie .movie_list li:first-child {
   margin-left: 0;
 }
+.container .index .movie .movie_list li .thumbnail {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  background: #000;
+  text-align: center;
+}
+.container .index .movie .movie_list li .thumbnail img {
+  width: 100%;
+}
 .container .index .movie .movie_list li .play_wrapper {
   width: 100%;
   height: 48px;
@@ -213,13 +228,14 @@ body {
   margin: 0 auto;
   background: url(../imgs/movie_play.png);
 }
-.container .index .movie .movie_list li:hover .play_wrapper .btn_play {
+.container .index .movie .movie_list li:hover .play_wrapper .btn_play, .container .index .movie .movie_list li.selected .play_wrapper .btn_play {
   background-position: -48px 0;
 }
 .container .index .movie .movie_list li .text_wrapper {
   width: 100%;
   position: absolute;
-  text-align: center;
+  /*在影片字的位置(置中或靠左)*/
+  /*text-align: center;*/
   bottom: -3.5em;
   color: #fff;
 }
@@ -651,35 +667,3 @@ body {
   top: 275px;
   z-index: 1;
 }
-/*IIP*/
-
-.patten{
-	
-	position:absolute;
-	right:0;
-	bottom:0;
-	z-index:99;
-	margin-bottom:-1px;
-	}
-.box-bage{
-	position:absolute;
-	right:0;
-	bottom:0;
-	z-index:100;
-	padding:10px;
-	}
-.bage{
-	margin-left:60%;
-	}
-.bage-word{
-	color:white;
-	font-family: 'square721bt';
-	text-align:right;
-	margin-top:5px;
-	line-height:18px;
-	}
-	
-.bage-word p{
-	font-size:16px;
-	}
-/**/
