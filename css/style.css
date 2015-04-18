@@ -60,11 +60,11 @@ body {
 /**/
 
 .container .index .ROG_LOGO{
-	width:91px;
-	height:91px;
-	position:absolute;
-	left:20px;
-	top:20px;
+	width: 223px;
+	height: 63px;
+	position: absolute;
+	left: 20px;
+	top: 20px;
 	}
 
 .container .index .top {
@@ -180,7 +180,7 @@ body {
   width: 90%;
   margin: 0 auto;
   background: #000;
-  padding-top: 40px;
+  padding: 40px 0;
 }
 .container .index .movie .movie_list ul {
   margin: 0 auto;
@@ -189,13 +189,41 @@ body {
   width: 12.5%;
   height: 120px;
   float: left;
+  /*display: inline-block;
+  *display: inline;
+  zoom: 1;*/
   background: #FFF;
   margin-left: 5%;
+  position: relative;
+  cursor: pointer;
 }
-.container .index .movie .movie_list li:hover {} .container .index .movie .movie_list li:first-child {
+.container .index .movie .movie_list li:first-child {
   margin-left: 0;
 }
-.container .index .movie .movie_list .movie_play {
+.container .index .movie .movie_list li .play_wrapper {
+  width: 100%;
+  height: 48px;
+  position: absolute;
+  top: 36px;
+}
+.container .index .movie .movie_list li .play_wrapper .btn_play {
+  width: 48px;
+  height: 48px;
+  overflow: hidden;
+  margin: 0 auto;
+  background: url(../imgs/movie_play.png);
+}
+.container .index .movie .movie_list li:hover .play_wrapper .btn_play {
+  background-position: -48px 0;
+}
+.container .index .movie .movie_list li .text_wrapper {
+  width: 100%;
+  position: absolute;
+  text-align: center;
+  bottom: -3.5em;
+  color: #fff;
+}
+/*.container .index .movie .movie_list .movie_play {
   width: 100px;
   height: 80px;
   margin: 0 auto;
@@ -214,7 +242,7 @@ body {
 }
 .container .index .movie .movie_list .movie_play p {
   text-align: center;
-}
+}*/
 .container .index .gamer {
   width: 100%;
   height:200px;
@@ -283,7 +311,6 @@ body {
 .container .hoarding {
   width: 100%;
   height: 300px;
-  background: ;
   padding-top:5%;
 }
 .container .news {
