@@ -32,9 +32,9 @@
   }
   
   
-.text_size_01 { font-family:"square721bt" , Arial; color:#FFF; font-size:0.82em; -webkit-transform : scale(0.83);-webkit-text-size-adjust:none;  display:inline-block; }
+.text_size_01 { font-family:"square721bt" , Arial; color:#FFF; font-size:0.82em; -webkit-transform : scale(0.83);-webkit-text-size-adjust:none;  display:inline-block; margin-left:-8%; }
 .text_size_02 { font-family:"square721bt" , Arial; color:#FFF; font-size:1em; line-height:1.5em;}
-.text_size_03 { font-family:"square721bt" , Arial; color:#FFF; font-size:1.333em; line-height:1.5em;}
+.text_size_03 { font-family:"square721bt" , Arial; color:#FFF; font-size:1.333em;  line-height:1.5em;}
 .text_size_04 { font-family:"square721bt" , Arial; color:#FFF; font-size:1.5em; font-weight:bold; line-height:1.5em; }
 .text_size_05 { font-family:"square721bt" , Arial; color:#FFF; font-size:2em; }
   

@@ -20,11 +20,53 @@ body {
 .container .index {
   width: 100%;
   height: 0;
-  padding-bottom: 65.36%;
+  padding-bottom: 66%;
   background-image: url(../imgs/KV_2.jpg);
   background-size: cover;
   position: relative;
 }
+
+/*IIP*/
+
+.patten{
+	
+	position:absolute;
+	right:0;
+	bottom:0;
+	z-index:99;
+	margin-bottom:-1px;
+	}
+.box-bage{
+	position:absolute;
+	right:0;
+	bottom:0;
+	z-index:100;
+	padding:10px;
+	}
+.bage{
+	margin-left:60%;
+	}
+.bage-word{
+	color:white;
+	font-family: 'square721bt';
+	text-align:right;
+	margin-top:5px;
+	line-height:18px;
+	}
+	
+.bage-word p{
+	font-size:16px;
+	}
+/**/
+
+.container .index .ROG_LOGO{
+	width:91px;
+	height:91;
+	position:absolute;
+	left:20px;
+	top:20px;
+	}
+
 .container .index .top {
   position: relative;
   width: 100%;
@@ -53,6 +95,8 @@ body {
   height: 36px;
   background-size: 307px 36px;
 }
+
+
 /*#countdown {
   margin-top: 33px;
 }*/
@@ -173,13 +217,14 @@ body {
 }
 .container .index .gamer {
   width: 100%;
-  height: 205px;
-  background: #FFF;
+  height:200px;
+  min-height:200px;
+  background:url(../imgs/team_BG.jpg);
   border-top: #FFF 1px solid;
-  border-bottom: #FFF 1px solid;
 }
 .container .index .gamer .special {
-  width: 25%;
+  width: 22%;
+  min-height:200px;
   background: #000;
   float: left;
 }
@@ -213,7 +258,7 @@ body {
   float: right;
 }
 .container .index .gamer .team {
-  width: 75%;
+  width: 78%;
   height: 0;
   float: right;
 }
@@ -221,66 +266,70 @@ body {
   font-weight: bold;
 }
 .container .index .gamer .team .profile {
-  width: 22%;
+  width: 24%;
   float: left;
-  margin-left: 3%;
+  margin-left: 1%;
 }
 .container .index .gamer .team .profile .pic {
-  width: 40%;
+  width: 35%;
   float: left;
 }
 .container .index .gamer .team .profile .experience {
   width: 60%;
   font-weight: bold;
   float: right;
-  margin-top: 8%;
 }
-.text_gap {
-  margin-left: 8%;
-}
+
 .container .hoarding {
   width: 100%;
   height: 300px;
-  background: #000;
+  background: ;
+  padding-top:5%;
 }
 .container .news {
-  width: 20%;
-  background: rgba(255, 255, 255, 0.3);
-  -moz-border-radius: 15px;
-  border-radius: 15px;
+  width: 40%;
+  float:left;
 }
+
+.container .news .board { width:90%; height:auto; background: rgba(255, 255, 255, 0.3); -moz-border-radius: 15px; border-radius: 15px; margin:0 auto;}
+.container .news .board ul { width:90%; margin:0 auto;}
+.container .news .board li.item_list { border-top: #FFF 1px solid; padding:3%;}
+.container .news .board li.item_list:first-child { border: 0;}
+.container .news .board .date { font-weight:bold;}
+
 .container .banner {
-  width: 70%;
+  width: 60%;
   float: right;
 }
 .container .banner .game_logo {
-  width: 20%;
+  width:20%;
+  height:50px;
   margin: 0 auto;
-  background-image: url(../imgs/Logo_Dota_2.png);
-  background-size: cover;
-}
+  }
 .container .banner .banner_teams {
-  width: 70%;
+  width: 95%;
   margin: 0 auto;
 }
 .container .banner .banner_teams .team_A {
   float: left;
-  width: 40%;
+  width: 45%;
 }
 .container .banner .banner_teams .team_B {
   float: right;
-  width: 40%;
+  width: 45%;
 }
 /*section*/
 
 .container .section {
   width: 100%;
   margin: 0 auto;
+  clear:both;
+  padding-top:5%;
 }
 .container .section .heading {
   font-family: "batman", Impact;
   font-size: 8.3em;
-  color: #cd0810;
+  color:#FFF;
   width: 97%;
   margin: 0 auto;
 }
@@ -314,21 +363,21 @@ body {
   padding-bottom: 64.84%;
 }
 .container .section .detail .word {
-  width: 80%;
-  margin-left: 10%;
+  width: 70%;
+  margin-left: 4%;
 }
 .container .section .detail .word .title {
   color: #e10913;
-  font-size: 5em;
+  font-size: 4em;
   font-weight: bold;
   margin-bottom: 20px;
   padding-top: 5%;
 }
 .container .section .detail .word .text {
   width: 30%;
-  min-width: 800px;
+  min-width: 600px;
   font-style: normal;
-  line-height: 2em;
+  line-height: 1.8em;
 }
 .container .section .detail .word_02 {
   width: 30%;
@@ -346,17 +395,17 @@ body {
   font-style: normal;
   line-height: 2em;
 }
-.container .section .detail .word .form {
+.container .section .detail .form {
   width: 70%;
   margin: 15% auto 3%;
 }
-.container .section .detail .word .form img {
+.container .section .detail .form img {
   width: 47%;
 }
-.container .section .detail .word .form .left {
+.container .section .detail .form .left {
   float: left;
 }
-.container .section .detail .word .form .right {
+.container .section .detail .form .right {
   float: right;
 }
 .container .section .detail .last {
@@ -392,7 +441,8 @@ body {
   clear: both;
 }
 .container .product ul.list_02 {
-  margin-left: 20%;
+	width: 100%;
+  margin-left: 10%;
   clear: both;
 }
 .container .product .list li, .list_02 li {
@@ -574,3 +624,35 @@ body {
   top: 275px;
   z-index: 1;
 }
+/*IIP*/
+
+.patten{
+	
+	position:absolute;
+	right:0;
+	bottom:0;
+	z-index:99;
+	margin-bottom:-1px;
+	}
+.box-bage{
+	position:absolute;
+	right:0;
+	bottom:0;
+	z-index:100;
+	padding:10px;
+	}
+.bage{
+	margin-left:60%;
+	}
+.bage-word{
+	color:white;
+	font-family: 'square721bt';
+	text-align:right;
+	margin-top:5px;
+	line-height:18px;
+	}
+	
+.bage-word p{
+	font-size:16px;
+	}
+/**/
