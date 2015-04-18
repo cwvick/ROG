@@ -30,6 +30,11 @@ $(function() {
     } else {
       $('body').removeClass('mobile');
     }
+
+    // resize youtube player
+    if ( YT_player ) {
+      YT_player.setSize($('.screen .video').outerWidth() , $('.screen .video').outerHeight());
+    }
   });
 
   var setBuyLinkData = function() {
@@ -51,10 +56,10 @@ firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
 
 // 3. This function creates an <iframe> (and YouTube player)
 //    after the API code downloads.
-var player;
+var YT_player;
 
 function onYouTubeIframeAPIReady() {
-  player = new YT.Player('video_player', {
+  YT_player = new YT.Player('video_player', {
     height: $('.screen .video').outerHeight(),
     width: $('.screen .video').outerWidth(),
     videoId: '5Ng-8AqhB1Y',
@@ -90,5 +95,5 @@ function onPlayerStateChange(event) {
 }
 
 function stopVideo() {
-  player.stopVideo();
+  YT_player.stopVideo();
 }
