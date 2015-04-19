@@ -34,6 +34,17 @@ $(function() {
     }
   });
 
+  $(document).on('click', '.scrolldown_container', function(event) {
+    event.preventDefault();
+    $('body').animate({
+      scrollTop: $('.team').offset().top
+    },
+    500,
+    function() {
+      /* stuff to do after animation is complete */
+    });
+  });
+
   var loadVideo = function(video_id) {
     if ( !YT_player || !YT_player.getIframe() ) {
       YT_player = new YT.Player('video_player', {
@@ -91,13 +102,28 @@ $(function() {
     var scrollTop = $(window).scrollTop();
 
     if ( sectionA_height <= winHeight + scrollTop ) {
-      $('.box-bage').addClass('stop');
+      $('.box-bage, .scrolldown_container').addClass('stop');
     } else {
-      $('.box-bage').removeClass('stop');
+      $('.box-bage, .scrolldown_container').removeClass('stop');
     }
   };
 
   bageHandler();
+
+  var scrolldownHandler = function() {
+    var bgPosition = parseInt($('.btn_scrolldown').css('background-position-y'));
+    var updateH = -91;
+
+    if ( bgPosition <= updateH*3 ) {
+      bgPosition = 0;
+    } else {
+      bgPosition = bgPosition + updateH;
+    }
+
+    $('.btn_scrolldown').css('background-position-y', bgPosition + 'px');
+  };
+
+  var scrolldownTimer = setInterval(function(){ scrolldownHandler(); }, 175);
 
 });
 
