@@ -76,7 +76,7 @@ body {
   height: 63px;
   position: absolute;
   left: 20px;
-  top: 20px;
+  top: 30px;
 }
 .container .index .top {
   position: relative;
@@ -92,12 +92,11 @@ body {
 }
 .container .index .top .timer {
   /*width: 30%;*/
-  
   margin: 0 auto;
   width: 405px;
   height: 60px;
   /*overflow: hidden;*/
-  
+  margin-top: -10px;
   background: url(../imgs/timer.png) no-repeat;
   background-size: 405px 60px;
   text-align: center;
@@ -142,21 +141,21 @@ body {
 .container .index .top .menu a:hover {
   color: #b90c0c;
 }
-.container .index .top .socila_media {
+.container .index .top .social_media {
   width: 15%;
   height: auto;
   position: absolute;
   right: 0;
-  top: 40px;
+  top: 55px;
 }
-.container .index .top .socila_media ul {
+.container .index .top .social_media ul {
   width: 100%;
 }
-.container .index .top .socila_media li {
+.container .index .top .social_media li {
   width: 20%;
   display: inline-block;
 }
-.container .index .top .socila_media a {
+.container .index .top .social_media a {
   width: 100%;
   height: auto;
   min-height: 30px;
