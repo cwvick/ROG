@@ -91,7 +91,7 @@ body {
   z-index: 100;
 }
 .container .index .top .timer {
-  /*width: 30%;*/
+  /*width: 30%;*/ 
   margin: 0 auto;
   width: 405px;
   height: 60px;
@@ -107,6 +107,12 @@ body {
   width: 307px;
   height: 36px;
   background-size: 307px 36px;
+}
+.timer .countdown_date {
+
+}
+.timer .countdown_date > div {
+  float: left;
 }
 /*#countdown {
   margin-top: 33px;
@@ -410,62 +416,56 @@ body {
 .container .section {
   width: 100%;
   margin: 0 auto;
-  clear:both;
+  clear: both;
 }
 .container .section .heading {
   font-family: "batman", Impact;
   font-size: 8.3em;
-  color:#FFF;
+  color: #FFF;
   width: 97%;
   margin: 0 auto;
 }
 .container .section .detail {
   width: 100%;
   height: 100%;
-  position:relative;
-  clear:both;
+  position: relative;
+  clear: both;
 }
-
 .container .section .detail .BG {
-	width:55%;
-	height:auto;
-	float:right;
+  width: 55%;
+  height: auto;
+  float: right;
 }
-
 .container .section .detail .word {
   width: 45%;
 }
 .container .section .detail .BG_02 {
-	width:55%;
-	height:auto;
-	float:left;
+  width: 55%;
+  height: auto;
+  float: left;
 }
 .container .section .detail .word_02 {
   width: 35%;
-  float:right;
-  margin-right:10%;
+  float: right;
+  margin-right: 10%;
 }
-
-
 .container .section .detail .title {
   color: #e10913;
   font-size: 7em;
   font-weight: bold;
   margin-bottom: 20px;
-  padding:0 10%;
+  padding: 0 10%;
 }
 .container .section .detail .text {
   width: 100%;
   font-style: normal;
   line-height: 1.8em;
-   padding:0 10%;
+  padding: 0 10%;
 }
-
-
 .container .section .detail .form {
   width: 70%;
   margin: 3% auto;
-  clear:both;
+  clear: both;
 }
 .container .section .detail .form img {
   width: 47%;
@@ -484,11 +484,10 @@ body {
 .divide {
   display: block;
   width: 100%;
-  height:auto;
+  height: auto;
   margin: 0 auto;
   z-index: 1;
 }
-
 /*product*/
 
 .container .product {
@@ -627,6 +626,7 @@ body {
   margin: 0 auto;
   background: #101216;
   /*min-width: 900px;*/
+  
   border-radius: 10px;
   padding: 25px 0;
 }
@@ -638,6 +638,7 @@ body {
 .lightbox .list_wrapper .country_list li, .lightbox .list_wrapper .wallpaper_list li {
   width: 16%;
   /*float: left;*/
+  
   display: inline-block;
   *display: inline;
   zoom: 1;
@@ -746,5 +747,24 @@ body {
     width: 100%;
     float: none;
     margin: 0;
+  }
+}
+@media screen and (max-width: 1024px) {
+  .container .section .detail .BG {
+    width: 100%;
+    height: auto;
+    float: none;
+  }
+  .container .section .detail .word {
+    width: 80%;
+  }
+  .container .section .detail .BG_02 {
+    width: 100%;
+    height: auto;
+    float: none;
+  }
+  .container .section .detail .word_02 {
+    width: 80%;
+    float: none;
   }
 }
