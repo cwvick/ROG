@@ -37,7 +37,7 @@ $(function() {
   $(document).on('click', '.scrolldown_container', function(event) {
     event.preventDefault();
     $('body').animate({
-      scrollTop: $('.team').offset().top
+      scrollTop: $('.video').offset().top + $('.video').outerHeight()
     },
     500,
     function() {
