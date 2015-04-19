@@ -232,6 +232,19 @@ $(function() {
 
   var scrolldownTimer = setInterval(function(){ scrolldownHandler(); }, 175);
 
+  // team rotation
+  var teamRotation = function() {
+    if ( $('.banner_teams .group1').is(':visible') ) {
+      $('.banner_teams .group1').hide();
+      $('.banner_teams .group2').fadeIn('slow');
+    } else {
+      $('.banner_teams .group2').hide();
+      $('.banner_teams .group1').fadeIn('slow');
+    }
+  };
+
+  var teamRotationTimer = setInterval(function(){ teamRotation(); }, 4000);
+
   $(window).load(function() {
     // Load the first video
     $('.movie_list li:first').trigger('click');

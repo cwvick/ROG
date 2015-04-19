@@ -397,6 +397,9 @@ body {
   width: 48%;
   margin: 1%;
 }
+.container .banner .banner_teams .group2 {
+  display: none;
+}
 .container .banner .banner_teams .team_A {
   float: left;
 }
