@@ -55,12 +55,17 @@ $(function() {
   $(document).on('click', '.btn-menu-buy, .btn-menu-pro', function(event) {
     event.preventDefault();
     $('body').animate({
-        scrollTop: $('.product').offset().top
-      },
-      200,
-      function() {
-        /* stuff to do after animation is complete */
-      });
+      scrollTop: $('.product').offset().top
+    },
+    200,
+    function() {
+      //
+    });
+  });
+
+  $(document).on('click', '.btn-menu-download', function(event) {
+    event.preventDefault();
+    $('.lightbox.download').show();
   });
 
   $(document).on('click', '.btn-buy', function(event) {
@@ -70,12 +75,6 @@ $(function() {
       setBuyContent(countryList);
       $('.lightbox.toBuy').show().css('visibility', 'hidden');
       $('.country_list li').css('height', $('.country_list').height());
-      // var totalWidth = 0;
-      // $('.country_list li').css('height', $('.country_list').height()).each(function(index, el) {
-      //   totalWidth = totalWidth + $(this).outerWidth();
-      // });
-      // // console.log(totalHeight);
-      // $('.country_list').width(totalWidth);
       $('.lightbox.toBuy').css('visibility', 'visible');
     }
   });

@@ -25,61 +25,59 @@ body {
   background-size: cover;
   position: relative;
 }
-
 /*IIP*/
 
-.patten{
-  position:absolute;
-  right:0;
-  bottom:0;
-  z-index:99;
-  margin-bottom:-1px;
-  }
-.box-bage{
-  position:fixed;
-  right:0;
-  bottom:0;
-  z-index:100;
-  padding:10px;
+.patten {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  z-index: 99;
+  margin-bottom: -1px;
+}
+.box-bage {
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  z-index: 100;
+  padding: 10px;
   color: #000;
-  }
+}
 .box-bage.stop {
   position: absolute;
   color: #fff;
 }
-.bage{
-  margin-left:60%;
-  }
-.bage-word{
+.bage {
+  margin-left: 60%;
+}
+.bage-word {
   /*color:white;*/
+  
   font-family: 'square721bt';
   /*font-family: 'MyriadProLight';*/
-  text-align:right;
-  margin-top:5px;
-  line-height:18px;
-  }
   
-.bage-word p{
-  font-size:16px;
-  }
+  text-align: right;
+  margin-top: 5px;
+  line-height: 18px;
+}
+.bage-word p {
+  font-size: 16px;
+}
 /**/
 
 .text_size_04 {
-  font-family: "square721bt" , Arial;
+  font-family: "square721bt", Arial;
   color: #FFF;
   font-size: 1.5em;
   font-weight: bold;
   line-height: 1.5em;
 }
-
-.container .index .ROG_LOGO{
-	width: 223px;
-	height: 63px;
-	position: absolute;
-	left: 20px;
-	top: 20px;
-	}
-
+.container .index .ROG_LOGO {
+  width: 223px;
+  height: 63px;
+  position: absolute;
+  left: 20px;
+  top: 20px;
+}
 .container .index .top {
   position: relative;
   width: 100%;
@@ -94,10 +92,12 @@ body {
 }
 .container .index .top .timer {
   /*width: 30%;*/
+  
   margin: 0 auto;
   width: 405px;
   height: 60px;
   /*overflow: hidden;*/
+  
   background: url(../imgs/timer.png) no-repeat;
   background-size: 405px 60px;
   text-align: center;
@@ -109,11 +109,10 @@ body {
   height: 36px;
   background-size: 307px 36px;
 }
-
-
 /*#countdown {
   margin-top: 33px;
 }*/
+
 .container .index .top .menu {
   min-width: 380px;
   position: fixed;
@@ -207,6 +206,7 @@ body {
   /*display: inline-block;
   *display: inline;
   zoom: 1;*/
+  
   background: #FFF;
   margin-left: 5%;
   position: relative;
@@ -246,6 +246,7 @@ body {
   position: absolute;
   /*在影片字的位置(置中或靠左)*/
   /*text-align: center;*/
+  
   bottom: -3.5em;
   color: #fff;
 }
@@ -269,11 +270,13 @@ body {
 .container .index .movie .movie_list .movie_play p {
   text-align: center;
 }*/
+
 .container .index .gamer {
   width: 100%;
   height: 225px;
-  min-height:200px;
+  min-height: 200px;
   /*background:url(../imgs/team_BG.jpg);*/
+  
   border-top: #FFF 1px solid;
 }
 .container .index .gamer .special {
@@ -315,6 +318,7 @@ body {
 .container .index .gamer .special .word .experience {
   width: 63%;
   /*font-weight: bold;*/
+  
   float: right;
   margin: 5px;
 }
@@ -343,17 +347,15 @@ body {
   font-weight: bold;
   float: right;
 }
-
 .container .hoarding {
   width: 100%;
   height: 300px;
-  padding-top:5%;
+  padding-top: 5%;
 }
 .container .news {
   width: 30%;
   float: left;
 }
-
 .container .news .board {
   width: 90%;
   height: auto;
@@ -363,11 +365,20 @@ body {
   margin: 0 auto;
   padding: 15px 0;
 }
-.container .news .board ul { width:90%; margin:0 auto;}
-.container .news .board li.item_list { border-top: #FFF 1px solid; padding:3%;}
-.container .news .board li.item_list:first-child { border: 0;}
-.container .news .board .date { font-weight:bold;}
-
+.container .news .board ul {
+  width: 90%;
+  margin: 0 auto;
+}
+.container .news .board li.item_list {
+  border-top: #FFF 1px solid;
+  padding: 3%;
+}
+.container .news .board li.item_list:first-child {
+  border: 0;
+}
+.container .news .board .date {
+  font-weight: bold;
+}
 .container .banner {
   width: 70%;
   margin-top: -3%;
@@ -397,13 +408,13 @@ body {
 .container .section {
   width: 100%;
   margin: 0 auto;
-  clear:both;
-  padding-top:5%;
+  clear: both;
+  padding-top: 5%;
 }
 .container .section .heading {
   font-family: "batman", Impact;
   font-size: 8.3em;
-  color:#FFF;
+  color: #FFF;
   width: 97%;
   margin: 0 auto;
 }
@@ -515,7 +526,7 @@ body {
   clear: both;
 }
 .container .product ul.list_02 {
-	width: 100%;
+  width: 100%;
   margin-left: 10%;
   clear: both;
 }
@@ -594,11 +605,12 @@ body {
   background-size: 100% auto;
 }
 /*light box*/
+
 .lightbox {
   position: absolute;
   width: 100%;
   height: 100%;
-  background: rgba(0, 0, 0, 0.9);
+  background: url(../imgs/bg_black_90.png);
   top: 0;
   z-index: 200;
 }
@@ -613,16 +625,16 @@ body {
   clear: both;
 }
 .lightbox .close {
-  width: 79px;
-  height: 106px;
-  background: url(../imgs/lightbox_close.png) no-repeat;
+  width: 71px;
+  height: 97px;
+  background: url(../imgs/btn_close.png) no-repeat;
   overflow: hidden;
   cursor: pointer;
   position: fixed;
-  right: 5px;
-  top: 5px;
+  right: 25px;
+  top: 25px;
   z-index: 1;
-} 
+}
 .lightbox .title {
   font-size: 4em;
   color: #FFF;
@@ -630,19 +642,19 @@ body {
   padding-bottom: 50px;
   clear: both;
 }
-.lightbox .country {
+.lightbox .list_wrapper {
   margin: 0 auto;
-  background: #111;
+  background: #101216;
   /*min-width: 900px;*/
   border-radius: 10px;
   padding: 25px 0;
 }
-.lightbox .country .country_list {
+.lightbox .list_wrapper .country_list, .lightbox .list_wrapper .wallpaper_list {
   margin: 0 auto;
   text-align: center;
   /*width: 800px;*/
 }
-.lightbox .country .country_list li {
+.lightbox .list_wrapper .country_list li, .lightbox .list_wrapper .wallpaper_list li {
   width: 16%;
   /*float: left;*/
   display: inline-block;
@@ -650,8 +662,34 @@ body {
   zoom: 1;
   vertical-align: top;
 }
-.lightbox .country .country_list li+li {
+.lightbox .list_wrapper .country_list li+li {
   border-left: #626262 solid 1px;
+}
+.lightbox .list_wrapper .wallpaper_list {
+  padding: 15px 0;
+}
+.lightbox .list_wrapper .wallpaper_list li {
+  width: 22%;
+  margin: 10px 1%;
+  max-width: 322px;
+  max-height: 181px;
+  overflow: hidden;
+  position: relative;
+}
+.lightbox .list_wrapper .wallpaper_list li img {
+  width: 100%;
+}
+.lightbox .list_wrapper .wallpaper_list li a {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: url(../imgs/download_overlay.png) no-repeat;
+  background-size: cover;
+  display: none;
+  font-size: 0;
+}
+.lightbox .list_wrapper .wallpaper_list li:hover a {
+  display: block;
 }
 .lightbox .country .country_icon {
   width: 93px;
