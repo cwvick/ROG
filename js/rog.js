@@ -41,7 +41,7 @@ $(function() {
     },
     500,
     function() {
-      /* stuff to do after animation is complete */
+      $('.scrolldown_container').css('bottom', $('.index').outerHeight() - $('.video').offset().top -$('.video').outerHeight());
     });
   });
 
@@ -103,8 +103,10 @@ $(function() {
 
     if ( sectionA_height <= winHeight + scrollTop ) {
       $('.box-bage, .scrolldown_container').addClass('stop');
+      $('.scrolldown_container').css('bottom', $('.index').outerHeight() - $('.video').offset().top -$('.video').outerHeight());
     } else {
       $('.box-bage, .scrolldown_container').removeClass('stop');
+      $('.scrolldown_container').removeAttr('style');
     }
   };
 
