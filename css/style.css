@@ -180,6 +180,7 @@ body {
   position: absolute;
   left: 19.5%;
   top: 9%;
+  visibility: hidden;
 }
 .container .index .screen .video .play {} .container .index .movie {
   width: 100%;
@@ -578,12 +579,12 @@ body {
   height: 100%;
   background: rgba(0, 0, 0, 0.9);
   top: 0;
-  z-index: 2;
+  z-index: 200;
 }
 .lightbox-wrapper {
   position: fixed;
   width: 100%;
-  top: 26%;
+  top: 20%;
 }
 .lightbox-container {
   width: 80%;
@@ -609,25 +610,27 @@ body {
   clear: both;
 }
 .lightbox .country {
-  width: 100%;
-  height: 330px;
   margin: 0 auto;
-  background-image: url(../imgs/lightbox_BG.png);
-  background-size: cover;
-  background-position: center center;
+  background: #111;
+  /*min-width: 900px;*/
+  border-radius: 10px;
+  padding: 25px 0;
 }
 .lightbox .country .country_list {
-  width: 800px;
   margin: 0 auto;
-  padding-top: 7%;
+  text-align: center;
+  /*width: 800px;*/
 }
-.lightbox .country .country_list ul {} .lightbox .country .country_list li {
+.lightbox .country .country_list li {
   width: 16%;
-  float: left;
-  border-right: #626262 solid 1px;
+  /*float: left;*/
+  display: inline-block;
+  *display: inline;
+  zoom: 1;
+  vertical-align: top;
 }
-.lightbox .country .country_list li:last-child {
-  border: none;
+.lightbox .country .country_list li+li {
+  border-left: #626262 solid 1px;
 }
 .lightbox .country .country_icon {
   width: 93px;
@@ -656,14 +659,18 @@ body {
 .lightbox .country .stroe {
   width: 100%;
 }
-.lightbox .country .stroe a.name {
+.lightbox .country .stroe .name, .lightbox .country .stroe .variation_name {
   width: 100%;
-  color: #FFF;
+  color: #fff;
   line-height: 2em;
   text-align: center;
-  display: inline-block;
+  display: block;
 }
-.lightbox .country .stroe a.name:hover {
+.lightbox .country .stroe .variation_name {
+  font-size: 0.8em;
+  color: #bbb;
+}
+.lightbox .country .stroe a.name:hover, .lightbox .country .stroe a.variation_name:hover {
   color: #cb1c06;
 }
 .scrolldown_container {
