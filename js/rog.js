@@ -17,6 +17,7 @@ function onYouTubeIframeAPIReady() {
       // 'autoplay': 0,
       // 'showinfo': 0,
       // 'controls': 0,
+      // 'autohide': 1
       // 'modestbranding': 1,
       // 'rel': 0
     },
@@ -150,6 +151,7 @@ $(function() {
         playerVars: {
           // 'showinfo': 0,
           // 'controls': 0,
+          // 'autohide': 1
           // 'modestbranding': 1,
           // 'rel': 0
         },
