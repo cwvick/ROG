@@ -253,4 +253,13 @@
 			"buyLink" : "http://www.prisjakt.nu/produkt.php?p=1520860"
 		}]
 	}]
+},{
+	"productId" : "GL552",
+	"countryList" : [{
+		"countryName" : "TW",
+		"storeList" : [{
+			"storeName" : "Asus",
+			"buyLink" : "http://www.asus.com/tw/Notebooks_Ultrabooks/GL552JX/wheretobuy/"
+		}]
+	}]
 }]
