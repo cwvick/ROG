@@ -127,4 +127,4 @@ input, select {
 .clear{clear:both;}
 /*ie7*/
 
-.auto_img { width:100%; height:auto;}
+.auto_img { width:100%; height:auto; padding: 20px 0;}

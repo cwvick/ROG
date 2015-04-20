@@ -51,7 +51,26 @@ function stopVideo() {
 
 $(function() {
   // Count down
-  $('#countdown').timeTo(new Date('Thu May 07 2015 00:00:00 GMT+0800 (Taipei Standard Time)'));
+  var setCountdown = function() {
+    var date = new Date('Thu May 07 2015 00:00:00 GMT+0800 (Taipei Standard Time)');
+    var size = 28;
+    var winWidth = $(window).width() 
+    
+    if ( winWidth <= 1400 ) {
+      size = 22;
+    } else if ( winWidth <= 1024 ) {
+      size = 18;
+    }
+
+    $('#countdown').empty().removeAttr('style').removeAttr('class');
+
+    $('#countdown').timeTo({
+      timeTo: date,
+      fontSize: size
+    });
+  };
+
+  setCountdown();
 
   $(document).on('click', '.btn-menu-buy, .btn-menu-pro', function(event) {
     event.preventDefault();
@@ -181,6 +200,7 @@ $(function() {
     }
 
     bageHandler();
+    // setCountdown();
   });
 
   var setBuyLinkData = function() {
@@ -248,6 +268,12 @@ $(function() {
   $(window).load(function() {
     // Load the first video
     $('.movie_list li:first').trigger('click');
+
+    if ($(window).width() < 1024) {
+      $('body').addClass('mobile');
+    } else {
+      $('body').removeClass('mobile');
+    }
   });
 
 
