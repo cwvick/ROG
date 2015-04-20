@@ -4,7 +4,13 @@
 		"countryName" : "US",
 		"storeList" : [{
 			"storeName" : "ASUS",
-			"buyLink" : "http://www.asus.com/us/site/g-series/G751/"
+			"variations" : [{
+				"name" : "G751JY",
+				"buyLink" : "http://www.asus.com/us/site/g-series/G751/"
+			},{
+				"name" : "G751J",
+				"buyLink" : "http://www.bestbuy.com/site/asus-17-3-laptop-intel-core-i7-8gb-memory-1tb-hard-drive-black/8618959.p?id=1219357515825&skuId=8618959"
+			}]
 		},{
 			"storeName" : "BestBuy",
 			"buyLink" : "http://www.bestbuy.com/site/asus-17-3-laptop-intel-core-i7-8gb-memory-1tb-hard-drive-black/8618959.p?id=1219357515825&skuId=8618959"
@@ -12,8 +18,8 @@
 	},{
 		"countryName" : "AU",
 		"storeList" : [{
-			"storeName" : "BestBuy",
-			"buyLink" : "http://www.bestbuy.com/site/asus-17-3-laptop-intel-core-i7-8gb-memory-1tb-hard-drive-black/8618959.p?id=1219357515825&skuId=8618959"
+			"storeName" : "ASUS",
+			"buyLink" : "http://www.asuspromotion.net/au/wheretobuy/index.htm"
 		}]
 	},{
 		"countryName" : "TW",
@@ -45,7 +51,7 @@
 				"buyLink" : "http://www.saturn.de/webapp/wcs/stores/servlet/MultiChannelSearch?storeId=48352&langId=-3&searchProfile=onlineshop&channel=sedede&searchParams=&path=&query=ASUS+G751"
 			},{
 				"name" : "G751JT",
-				"buyLink" : "http://24h.pchome.com.tw/prod/DHAFBL-A905PA4Q"
+				"buyLink" : "http://www.saturn.de/webapp/wcs/stores/servlet/MultiChannelSearch?storeId=48352&langId=-3&searchProfile=onlineshop&channel=sedede&searchParams=&path=&query=ASUS+G751"
 			}]
 		},{
 			"storeName" : "Amazon",
@@ -102,7 +108,7 @@
 				"buyLink" : "http://search.rueducommerce.fr/search?s=G751JM&a="
 			}]
 		},{
-			"storeName" : "Adhérents",
+			"storeName" : "Fnac",
 			"variations" : [{
 				"name" : "G751JM",
 				"buyLink" : "http://recherche.fnac.com/SearchResult/ResultList.aspx?SCat=8%211&Search=G751JM&sft=1&sa=0&submitbtn=OK"
@@ -110,7 +116,7 @@
 		},{
 			"storeName" : "Cdiscount.",
 			"variations" : [{
-				"name" : "G751JM",
+				"name" : "G751JY",
 				"buyLink" : "http://www.cdiscount.com/search/10/asus+g751jy.html#_his_"
 			}]
 		}]
@@ -119,8 +125,8 @@
 		"storeList" : [{
 			"storeName" : "Prisjakt",
 			"variations" : [{
-				"name" : "G751JM",
-				"buyLink" : "http://www.grosbill.com/catv2.cgi?mode=recherche&recherche=G751JM#filtre_mini%3D1098%26filtre_maxi%3D1400%26filtre_marque%3DASUS"
+				"name" : "G751JY",
+				"buyLink" : "http://www.prisjakt.nu/search.php?s=g751jy"
 			},{
 				"name" : "G751JT",
 				"buyLink" : "http://www.prisjakt.nu/search.php?s=g751jt&view=m#prodlista"
@@ -148,7 +154,7 @@
 		"countryName" : "SW",
 		"storeList" : [{
 			"storeName" : "prisjakt",
-			"buyLink" : "http://www.asuspromotion.net/au/wheretobuy/index.htm"
+			"buyLink" : "http://www.prisjakt.nu/search.php?s=g501jw&view=m#prodlista"
 		}]
 	}]
 },{
