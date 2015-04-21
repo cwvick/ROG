@@ -579,7 +579,7 @@ body {
   font-size: 1.3em;
   line-height: 2em;
   color: #FFF;
-  word-break: break-all;
+  /*word-break: break-all;*/
   margin-top: 15px;
   font-family: 'MyriadProLight';
 }
