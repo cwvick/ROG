@@ -265,12 +265,38 @@ $(function() {
     setProdListHeight();
   });
 
+  var setting_rmHeight = 120;
+
   // read more for product info
   $('.product .list_item .info').readmore({
-    collapsedHeight: 120,
+    collapsedHeight: setting_rmHeight,
     moreLink: '<div class="readmore_container clearfix"><div class="rm_arrow down"></div><a href="#">read more</a></div>',
     lessLink: '<div class="readmore_container clearfix"><div class="rm_arrow up"></div><a href="#">close</a></div>',
+    beforeToggle: function(trigger, element, expanded) {
+      if(expanded) {
+        $(element).css('padding-bottom', 0);
+      }
+    },
     afterToggle: function(trigger, element, expanded) {
+      var maxHeight = $(element).height() + $(element).prev('.model').height();
+
+      $(element).parents('.list').find('li.list_item').each(function(index, el) {
+        if ( $(this).find('.info').height() + $(this).find('.model').height() > maxHeight ) {
+          maxHeight = $(this).find('.info').height() + $(this).find('.model').height();
+        }
+      });
+
+      $(element).parents('.list').find('.info').each(function(index, el) {
+        var selfHeight = $(this).height() + $(this).prev('.model').height();
+        if ( $(this).height() > setting_rmHeight && selfHeight < maxHeight ) {
+          $(this).next('.readmore_container').css('padding-bottom', maxHeight - selfHeight + 'px');
+        }        
+      });
+
+      if (!expanded) {
+        $(element).css('padding-bottom', 0);
+      }
+
       setProdListHeight();
     }
   });
