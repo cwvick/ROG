@@ -584,8 +584,6 @@ body {
   line-height: 2em;
   color: #FFF;
   word-break: break-all;
-  margin-bottom: 10%;
-  min-height: 320px;
   margin-top: 15px;
   font-family: 'MyriadProLight';
 }
@@ -904,3 +902,24 @@ body {
     font-size: 0.8em;
   }
 }
+.readmore_container {
+  text-align: right;
+  margin: 3px 0 25px;
+  line-height: 15px;
+}
+.readmore_container a {
+  float: right;
+  color: #cd0811; 
+}
+.readmore_container .rm_arrow {
+  float: right;
+  background: url(../imgs/readmore_arrows.png) no-repeat;
+  width: 8px;
+  height: 15px;
+  overflow: hidden;
+  margin-left: 3px;
+}
+.readmore_container .rm_arrow.up {
+  background-position: 0 -15px
+}
+

@@ -4,8 +4,6 @@ tag.src = "https://www.youtube.com/iframe_api";
 var firstScriptTag = document.getElementsByTagName('script')[0];
 firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
 
-// 3. This function creates an <iframe> (and YouTube player)
-//    after the API code downloads.
 var YT_player;
 
 function onYouTubeIframeAPIReady() {
@@ -13,14 +11,6 @@ function onYouTubeIframeAPIReady() {
     height: $('.screen .video').outerHeight(),
     width: $('.screen .video').outerWidth(),
     videoId: '5Ng-8AqhB1Y',
-    playerVars: {
-      // 'autoplay': 0,
-      // 'showinfo': 0,
-      // 'controls': 0,
-      // 'autohide': 1
-      // 'modestbranding': 1,
-      // 'rel': 0
-    },
     events: {
       'onReady': onPlayerReady,
       'onStateChange': onPlayerStateChange
@@ -28,14 +18,10 @@ function onYouTubeIframeAPIReady() {
   });
 }
 
-// 4. The API will call this function when the video player is ready.
 function onPlayerReady(event) {
   // event.target.playVideo();
 }
 
-// 5. The API calls this function when the player's state changes.
-//    The function indicates that when playing a video (state=1),
-//    the player should play for six seconds and then stop.
 var done = false;
 
 function onPlayerStateChange(event) {
@@ -54,7 +40,7 @@ $(function() {
   var setCountdown = function() {
     var date = new Date('Thu May 07 2015 00:00:00 GMT+0800 (Taipei Standard Time)');
     var size = 28;
-    var winWidth = $(window).width() 
+    var winWidth = $(window).width();
     
     if ( winWidth <= 1400 ) {
       size = 22;
@@ -76,11 +62,7 @@ $(function() {
     event.preventDefault();
     $('body').animate({
       scrollTop: $('.product').offset().top
-    },
-    200,
-    function() {
-      //
-    });
+    },200);
   });
 
   $(document).on('click', '.btn-menu-download', function(event) {
@@ -95,15 +77,15 @@ $(function() {
     if (countryList) {
       setBuyContent(countryList);
       $('.lightbox.toBuy').show().css('visibility', 'hidden');
-      $('.country_list li .store').readmore({
-        collapsedHeight: 120,
-        beforeToggle: function(trigger, element, expanded) {
-          $('.country_list li').css('height', '100%');
-        },
-        afterToggle: function(trigger, element, expanded) {
-          $('.country_list li').css('height', $('.country_list').height());
-        }
-      });
+      // $('.country_list li .store').readmore({
+      //   collapsedHeight: 120,
+      //   beforeToggle: function(trigger, element, expanded) {
+      //     $('.country_list li').css('height', '100%');
+      //   },
+      //   afterToggle: function(trigger, element, expanded) {
+      //     $('.country_list li').css('height', $('.country_list').height());
+      //   }
+      // });
       $('.country_list li').css('height', $('.country_list').height());
       $('.lightbox-wrapper').height($(window).height());
       $('.lightbox.toBuy').css('visibility', 'visible');
@@ -178,13 +160,6 @@ $(function() {
         height: $('.screen .video').outerHeight(),
         width: $('.screen .video').outerWidth(),
         videoId: video_id,
-        playerVars: {
-          // 'showinfo': 0,
-          // 'controls': 0,
-          // 'autohide': 1
-          // 'modestbranding': 1,
-          // 'rel': 0
-        },
         events: {
           'onReady': onPlayerReady,
           'onStateChange': onPlayerStateChange
@@ -248,7 +223,7 @@ $(function() {
   };
 
   bageHandler();
-//zek
+
   var scrolldownHandler = function() {
     var bgPosition = parseInt($('.btn_scrolldown').css('background-position-y'));
     var updateH = -155;
@@ -285,6 +260,19 @@ $(function() {
       $('body').addClass('mobile');
     } else {
       $('body').removeClass('mobile');
+    }
+  });
+
+  // read more for product info
+  $('.product .list_item .info').readmore({
+    collapsedHeight: 120,
+    moreLink: '<div class="readmore_container clearfix"><div class="rm_arrow down"></div><a href="#">read more</a></div>',
+    lessLink: '<div class="readmore_container clearfix"><div class="rm_arrow up"></div><a href="#">close</a></div>',
+    beforeToggle: function(trigger, element, expanded) {
+
+    },
+    afterToggle: function(trigger, element, expanded) {
+      subHeight = $(element).height();
     }
   });
 
