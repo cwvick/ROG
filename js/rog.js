@@ -261,6 +261,8 @@ $(function() {
     } else {
       $('body').removeClass('mobile');
     }
+
+    setProdListHeight();
   });
 
   // read more for product info
@@ -268,13 +270,25 @@ $(function() {
     collapsedHeight: 120,
     moreLink: '<div class="readmore_container clearfix"><div class="rm_arrow down"></div><a href="#">read more</a></div>',
     lessLink: '<div class="readmore_container clearfix"><div class="rm_arrow up"></div><a href="#">close</a></div>',
-    beforeToggle: function(trigger, element, expanded) {
-
-    },
     afterToggle: function(trigger, element, expanded) {
-      subHeight = $(element).height();
+      setProdListHeight();
     }
   });
+
+  // product info init
+  var setProdListHeight = function() {
+    $('.product .list li.list_item').height('auto');
+
+    $('.product .list').each(function(index, el) {
+      var minHeight = 0;
+      $(this).find('li.list_item').each(function(index, el) {
+        if ( $(this).height() > minHeight ) {
+          minHeight = $(this).height();
+        }
+      });
+      $(this).find('li.list_item').height(minHeight);
+    });
+  };
 
 
 });

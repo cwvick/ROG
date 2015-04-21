@@ -544,15 +544,8 @@ body {
   height: auto;
 }
 /*product_items*/
-
 .container .product ul.list {
-  width: 100%;
-  clear: both;
-}
-.container .product ul.list_02 {
-  width: 100%;
-  margin-left: 10%;
-  clear: both;
+  margin-bottom: 15px;
 }
 .container .product .list li, .list_02 li {
   float: left;
@@ -560,6 +553,9 @@ body {
 }
 .container .product .list_item {
   width: 24.9%;
+}
+.container .product ul li + li {
+  border-left: 1px solid #323030;
 }
 .container .product .items {
   width: 90%;
