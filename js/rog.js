@@ -85,6 +85,7 @@ $(function() {
 
   $(document).on('click', '.btn-menu-download', function(event) {
     event.preventDefault();
+    $('.lightbox-wrapper').height($(window).height());
     $('.lightbox.download').show();
   });
 
@@ -94,7 +95,17 @@ $(function() {
     if (countryList) {
       setBuyContent(countryList);
       $('.lightbox.toBuy').show().css('visibility', 'hidden');
+      $('.country_list li .store').readmore({
+        collapsedHeight: 120,
+        beforeToggle: function(trigger, element, expanded) {
+          $('.country_list li').css('height', '100%');
+        },
+        afterToggle: function(trigger, element, expanded) {
+          $('.country_list li').css('height', $('.country_list').height());
+        }
+      });
       $('.country_list li').css('height', $('.country_list').height());
+      $('.lightbox-wrapper').height($(window).height());
       $('.lightbox.toBuy').css('visibility', 'visible');
     }
   });
@@ -104,7 +115,7 @@ $(function() {
     $.each(countryList, function(index, country) {
       content += '<li>' +
                     '<div class="country_icon ' + country.countryName + '"></div>' +
-                    '<div class="stroe">' +
+                    '<div class="store">' +
                       getStoreContent(country.storeList) +
                     '</div>' +
                   '</li>';
@@ -201,6 +212,7 @@ $(function() {
 
     bageHandler();
     // setCountdown();
+    $('.lightbox-wrapper').height($(window).height());
   });
 
   var setBuyLinkData = function() {

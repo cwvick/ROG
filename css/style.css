@@ -9,15 +9,15 @@ body {
   position: relative;
   height: 100%;
 }
-.recWin{/**/
-	position:absolute;
-	top:125px;
-	right:20px;
-    font-family: 'MyriadProLight';
-	color:white;
-	font-size:1.5em;
-	z-index:999;
-	}
+.recWin {
+  position: absolute;
+  top: 125px;
+  right: 20px;
+  font-family: 'MyriadProLight';
+  color: white;
+  font-size: 1.5em;
+  z-index: 5;
+}
 .contaier {
   width: 100%;
   margin: 0 auto;
@@ -35,13 +35,14 @@ body {
   position: relative;
 }
 /*IIP*/
-.hilight{
+
+.hilight {
   position: absolute;
   right: 0;
   bottom: 0;
   z-index: 98;
   margin-bottom: -1px;
-	}
+}
 .patten {
   position: absolute;
   right: 0;
@@ -71,8 +72,7 @@ body {
 }
 .bage-word p {
   font-size: 16px;
-    font-family: 'MyriadProLight';
-
+  font-family: 'MyriadProLight';
 }
 /**/
 
@@ -169,7 +169,8 @@ body {
   margin-left: 8%;
   text-align: center;
   line-height: 2.5em;
-    vertical-align: baseline;/**/
+  vertical-align: baseline;
+  /**/
 }
 .container .index .top .menu li:first-child {
   margin-left: 0;
@@ -186,18 +187,16 @@ body {
   position: absolute;
   right: 0;
   top: 55px;
-
 }
-.follow{
-	font-family: 'MyriadProLight';
-	color:white;
-	font-size:1.7em;
-	font-weight:600;
-	position: absolute;
- 	left: -120px;
-  	top: 10px;
-	
-	}
+.follow {
+  font-family: 'MyriadProLight';
+  color: white;
+  font-size: 1.7em;
+  font-weight: 600;
+  position: absolute;
+  left: -120px;
+  top: 10px;
+}
 .container .index .top .social_media ul {
   width: 100%;
 }
@@ -333,7 +332,6 @@ body {
   min-height: 225px;
   background: #000;
   float: left;
- 
 }
 .container .index .gamer .special .special_pic {
   width: 100%;
@@ -372,32 +370,32 @@ body {
   margin: 5px;
 }
 .container .index .gamer .team {
-	width: 80%;
-	height: 225px;
-	float: right;
-	background: url(../imgs/team_BG.jpg);
+  width: 80%;
+  height: 225px;
+  float: right;
+  background: url(../imgs/team_BG.jpg);
 }
 .container .index .gamer .team .team_name {
-	font-weight: bold;
-	/**/
-	width: 75%;
-	margin: 0 auto;
+  font-weight: bold;
+  /**/
+  
+  width: 75%;
+  margin: 0 auto;
 }
 .container .index .gamer .team .profile {
-	width: 24%;
-	float: left;
-	margin-left: 1%;
+  width: 24%;
+  float: left;
+  margin-left: 1%;
 }
 .container .index .gamer .team .profile .pic {
-	width: 30%;
-	float: left;
+  width: 30%;
+  float: left;
 }
 .container .index .gamer .team .profile .experience {
-	width: 63%;
-	font-weight: bold;
-	float: right;
+  width: 63%;
+  font-weight: bold;
+  float: right;
 }
-
 .container .hoarding {
   width: 100%;
   height: 300px;
@@ -644,16 +642,24 @@ body {
   background: url(../imgs/bg_black_90.png);
   top: 0;
   z-index: 200;
+  text-align: center;
 }
 .lightbox-wrapper {
   position: fixed;
   width: 100%;
-  top: 20%;
+}
+.lightbox-wrapper:before {
+  content: '';
+  display: inline-block;
+  vertical-align: middle ;
+  height: 100%;
 }
 .lightbox-container {
   width: 80%;
   margin: 0 auto;
   clear: both;
+  display: inline-block;
+  vertical-align: middle;
 }
 .lightbox .close {
   width: 71px;
@@ -679,7 +685,12 @@ body {
   margin: 0 auto;
   background: #101216;
   border-radius: 10px;
+  -moz-border-radius: 10px;
+  -webkit-border-radius: 10px;
   padding: 25px 0;
+  -webkit-box-shadow: 0px 0px 22px 6px rgba(0,0,0,0.9);
+  -moz-box-shadow: 0px 0px 22px 6px rgba(0,0,0,0.9);
+  box-shadow: 0px 0px 22px 6px rgba(0,0,0,0.9);
 }
 .lightbox .list_wrapper .country_list, .lightbox .list_wrapper .wallpaper_list {
   margin: 0 auto;
@@ -687,8 +698,6 @@ body {
 }
 .lightbox .list_wrapper .country_list li, .lightbox .list_wrapper .wallpaper_list li {
   width: 16%;
-  /*float: left;*/
-  
   display: inline-block;
   *display: inline;
   zoom: 1;
@@ -747,29 +756,35 @@ body {
 .lightbox .country .country_icon.SW {
   background-position: -465px 0;
 }
-.lightbox .country .stroe {
-  width: 100%;
-}
-.lightbox .country .stroe .name, .lightbox .country .stroe .variation_name {
+.lightbox .country .store .name, .lightbox .country .store .variation_name {
   width: 100%;
   color: #fff;
-  line-height: 2em;
+  line-height: 30px;
   text-align: center;
   display: block;
   font-size: 1.5em;
   font-family: Arial;
 }
-.lightbox .country .stroe .variation_name {
+.lightbox .country .store .variation_name {
   font-size: 0.8em;
   color: #bbb;
 }
-.lightbox .country .stroe a.name:hover, .lightbox .country .stroe a.variation_name:hover {
+.lightbox .country .store a.name:hover, .lightbox .country .store a.variation_name:hover {
+  color: #cb1c06;
+}
+.lightbox .country .country_list li .store + a {
+  color: #EFC82E;
+  margin-top: 5px;
+}
+.lightbox .country .country_list li .store + a:hover {
   color: #cb1c06;
 }
 .scrolldown_container {
   position: fixed;
   left: 10px;
-  bottom: 10px;/*zek*/
+  bottom: 10px;
+  /*zek*/
+  
   z-index: 1;
   cursor: pointer;
 }
