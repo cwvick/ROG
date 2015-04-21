@@ -1,9 +1,3 @@
-// var tag = document.createElement('script');
-
-// tag.src = "https://www.youtube.com/iframe_api";
-// var firstScriptTag = document.getElementsByTagName('script')[0];
-// firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
-
 $(function() {
   // Count down
   var setCountdown = function() {
@@ -46,15 +40,7 @@ $(function() {
     if (countryList) {
       setBuyContent(countryList);
       $('.lightbox.toBuy').show().css('visibility', 'hidden');
-      // $('.country_list li .store').readmore({
-      //   collapsedHeight: 120,
-      //   beforeToggle: function(trigger, element, expanded) {
-      //     $('.country_list li').css('height', '100%');
-      //   },
-      //   afterToggle: function(trigger, element, expanded) {
-      //     $('.country_list li').css('height', $('.country_list').height());
-      //   }
-      // });
+
       $('.country_list li').css('height', $('.country_list').height());
       $('.lightbox-wrapper').height($(window).height());
       $('.lightbox.toBuy').css('visibility', 'visible');
@@ -131,57 +117,7 @@ $(function() {
     });
   });
 
-  // Youtube api
-  // var YT_player;
-
-  // function onYouTubeIframeAPIReady() {
-  //   YT_player = new YT.Player('video_player', {
-  //     height: $('.screen .video').outerHeight(),
-  //     width: $('.screen .video').outerWidth(),
-  //     videoId: '5Ng-8AqhB1Y',
-  //     events: {
-  //       'onReady': onPlayerReady,
-  //       'onStateChange': onPlayerStateChange
-  //     }
-  //   });
-  // }
-
-  function onPlayerReady(event) {
-    // event.target.playVideo();
-  }
-
-  var done = false;
-
-  function onPlayerStateChange(event) {
-    if (event.data == YT.PlayerState.PLAYING && !done) {
-      setTimeout(stopVideo, 6000);
-      done = true;
-    }
-  }
-
-  function stopVideo() {
-    YT_player.stopVideo();
-  }
-
   var loadVideo = function(video_id) {
-    // if ( YT_player ) {
-    //   YT_player.destroy();
-    // }
-
-    // if ( !YT_player || !YT_player.getIframe() ) {
-    //   YT_player = new YT.Player('video_player', {
-    //     height: $('.screen .video').outerHeight(),
-    //     width: $('.screen .video').outerWidth(),
-    //     videoId: video_id,
-    //     events: {
-    //       'onReady': onPlayerReady,
-    //       'onStateChange': onPlayerStateChange
-    //     }
-    //   });
-    // } else {
-    //   YT_player.loadVideoById(video_id);
-    // }
-
     var youtubeObj = '<iframe width="' + $('.screen .video').outerWidth() + '" height="' + $('.screen .video').outerHeight() + '" src="https://www.youtube.com/embed/' + video_id + '" frameborder="0" allowfullscreen></iframe>';
 
     $('#video_player').html(youtubeObj);
@@ -189,10 +125,6 @@ $(function() {
   };
 
   var playTwitch = function(video_id) {
-    // if ( YT_player ) {
-    //   YT_player.destroy();
-    // }
-
     var twitchObj = '<object bgcolor="#000000" data="http://www.twitch.tv/swflibs/TwitchPlayer.swf" height="' + $('.screen .video').outerHeight() + '"  width="' + $('.screen .video').outerWidth() + '" id="clip_embed_player_flash" type="application/x-shockwave-flash"><param name="movie" value="http://www.twitch.tv/swflibs/TwitchPlayer.swf" /><param name="allowScriptAccess" value="always" /><param name="allowNetworking" value="all" /><param name="allowFullScreen" value="true" /><param name="flashvars" value="channel=esl_heroes&amp;auto_play=false&amp;start_volume=25&amp;videoId=v' + video_id + '&amp;device_id=8a4b98c5339d86c3" /></object>';
     
     $('#video_player').html(twitchObj);
@@ -206,11 +138,6 @@ $(function() {
       $('body').addClass('mobile');
     } else {
       $('body').removeClass('mobile');
-    }
-
-    // resize youtube player
-    if ( YT_player ) {
-      YT_player.setSize($('.screen .video').outerWidth() , $('.screen .video').outerHeight());
     }
 
     bageHandler();
@@ -343,6 +270,5 @@ $(function() {
       $(this).find('li.list_item').height(minHeight);
     });
   };
-
 
 });
