@@ -132,6 +132,9 @@ $(function() {
     $('.screen .video').css('visibility', 'visible');
   };
 
+  // Load the first video
+  $('.movie_list li:first').trigger('click');
+
   // resize
   $(window).resize(function() {
     if ($(window).width() < 1024) {
@@ -139,6 +142,9 @@ $(function() {
     } else {
       $('body').removeClass('mobile');
     }
+
+    // resize player
+    $('.movie_list ul li.selected').removeClass('selected').trigger('click');
 
     bageHandler();
     // setCountdown();
@@ -208,8 +214,6 @@ $(function() {
   var teamRotationTimer = setInterval(function(){ teamRotation(); }, 4000);
 
   $(window).load(function() {
-    // Load the first video
-    $('.movie_list li:first').trigger('click');
 
     if ($(window).width() < 1024) {
       $('body').addClass('mobile');
