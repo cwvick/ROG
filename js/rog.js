@@ -17,7 +17,8 @@ $(function() {
       size = 18;
     }
 
-    $('#countdown').empty().removeAttr('style').removeAttr('class');
+    $('#countdown').remove();
+    $('.timer').prepend('<div id="countdown"></div>');
 
     $('#countdown').timeTo({
       timeTo: date,
@@ -177,7 +178,7 @@ $(function() {
     }
 
     bageHandler();
-    // setCountdown();
+    setCountdown();
     $('.lightbox-wrapper').height($(window).height());
   });
 
