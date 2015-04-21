@@ -9,6 +9,15 @@ body {
   position: relative;
   height: 100%;
 }
+.recWin{/**/
+	position:absolute;
+	top:125px;
+	right:20px;
+    font-family: 'MyriadProLight';
+	color:white;
+	font-size:1.5em;
+	z-index:999;
+	}
 .contaier {
   width: 100%;
   margin: 0 auto;
@@ -26,7 +35,13 @@ body {
   position: relative;
 }
 /*IIP*/
-
+.hilight{
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  z-index: 98;
+  margin-bottom: -1px;
+	}
 .patten {
   position: absolute;
   right: 0;
@@ -47,20 +62,17 @@ body {
   color: #fff;
 }
 .bage {
-  margin-left: 60%;
+  margin-left: 50%;
 }
 .bage-word {
-  /*color:white;*/
-  
-  font-family: 'square721bt';
-  /*font-family: 'MyriadProLight';*/
-  
   text-align: right;
   margin-top: 5px;
   line-height: 18px;
 }
 .bage-word p {
   font-size: 16px;
+    font-family: 'MyriadProLight';
+
 }
 /**/
 
@@ -157,6 +169,7 @@ body {
   margin-left: 8%;
   text-align: center;
   line-height: 2.5em;
+    vertical-align: baseline;/**/
 }
 .container .index .top .menu li:first-child {
   margin-left: 0;
@@ -173,7 +186,18 @@ body {
   position: absolute;
   right: 0;
   top: 55px;
+
 }
+.follow{
+	font-family: 'MyriadProLight';
+	color:white;
+	font-size:1.7em;
+	font-weight:600;
+	position: absolute;
+ 	left: -120px;
+  	top: 10px;
+	
+	}
 .container .index .top .social_media ul {
   width: 100%;
 }
@@ -341,7 +365,7 @@ body {
   font-weight: bold;
 }
 .container .index .gamer .special .word .experience {
-  width: 63%;
+  width: 64%;
   /*font-weight: bold;*/
   
   float: right;
@@ -365,11 +389,11 @@ body {
 	margin-left: 1%;
 }
 .container .index .gamer .team .profile .pic {
-	width: 35%;
+	width: 30%;
 	float: left;
 }
 .container .index .gamer .team .profile .experience {
-	width: 60%;
+	width: 63%;
 	font-weight: bold;
 	float: right;
 }
@@ -745,7 +769,7 @@ body {
 .scrolldown_container {
   position: fixed;
   left: 10px;
-  bottom: 101px;
+  bottom: 10px;/*zek*/
   z-index: 1;
   cursor: pointer;
 }
@@ -753,10 +777,10 @@ body {
   position: absolute;
 }
 .btn_scrolldown {
-  width: 106px;
-  height: 91px;
+  width: 77px;
+  height: 155px;
   overflow: hidden;
-  background: url(../imgs/sd_arrow.png) 0 0 no-repeat;
+  background: url(../imgs/arr.png) 0 0 no-repeat;
 }
 .scrolldown_text {
   width: 106px;

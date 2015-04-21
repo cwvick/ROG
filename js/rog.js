@@ -236,12 +236,12 @@ $(function() {
   };
 
   bageHandler();
-
+//zek
   var scrolldownHandler = function() {
     var bgPosition = parseInt($('.btn_scrolldown').css('background-position-y'));
-    var updateH = -91;
+    var updateH = -155;
 
-    if ( bgPosition <= updateH*3 ) {
+    if ( bgPosition <= updateH*6 ) {
       bgPosition = 0;
     } else {
       bgPosition = bgPosition + updateH;

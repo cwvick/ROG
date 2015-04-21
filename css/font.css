@@ -27,14 +27,14 @@
 .text_size_01 { /**/
   font-family:  Arial;
   color: #FFF;
-  font-size: 0.82em;
-  -webkit-transform: scale(0.83);
+  font-size: 1em;
+  -webkit-transform: scale(0.9);
   -webkit-text-size-adjust: none;
  /* display: inline-block;*/
-  margin-left: -8%;
+  margin-left: -5px;
   line-height: 1.4em;
   *font-family:9px;
-  margin-left: 0%;
+
 }
 
 .text_size_02 {
