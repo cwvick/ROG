@@ -180,6 +180,8 @@ $(function() {
     bageHandler();
     setCountdown();
     $('.lightbox-wrapper').height($(window).height());
+
+    gamerHeightHandler();
   });
 
   var setBuyLinkData = function() {
@@ -218,9 +220,9 @@ $(function() {
 
   var scrolldownHandler = function() {
     var bgPosition = parseInt($('.btn_scrolldown').css('background-position-y'));
-    var updateH = -155;
+    var updateH = -91;
 
-    if ( bgPosition <= updateH*6 ) {
+    if ( bgPosition <= updateH*3 ) {
       bgPosition = 0;
     } else {
       bgPosition = bgPosition + updateH;
@@ -308,5 +310,12 @@ $(function() {
     });
   };
 
+  var gamerHeightHandler = function() {
+
+    var wHeight = $(".special").height();
+    $(".gamer,.team").height(wHeight);
+  };
+
+  gamerHeightHandler();
 
 });

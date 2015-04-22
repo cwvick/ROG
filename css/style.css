@@ -35,7 +35,6 @@ body {
   position: relative;
 }
 /*IIP*/
-
 .hilight {
   position: absolute;
   right: 0;
@@ -169,7 +168,7 @@ body {
   margin-left: 8%;
   text-align: center;
   line-height: 2.5em;
-  vertical-align: baseline;
+ /* vertical-align: baseline;*/
   /**/
 }
 .container .index .top .menu li:first-child {
@@ -241,7 +240,7 @@ body {
 .container .index .movie .movie_list {
   width: 90%;
   margin: 0 auto;
-  background: #000;
+ /* background: #000;*/
   padding: 40px 0;
 }
 .container .index .movie .movie_list ul {
@@ -319,90 +318,14 @@ body {
   text-align: center;
 }*/
 
-.container .index .gamer {
-  width: 100%;
-  height: 225px;
-  min-height: 200px;
-  /*background:url(../imgs/team_BG.jpg);*/
-  
-  border-top: #FFF 1px solid;
-}
-.container .index .gamer .special {
-  width: 20%;
-  min-height: 225px;
-  background: #000;
-  float: left;
-}
-.container .index .gamer .special .special_pic {
-  width: 100%;
-  height: auto;
-  background-image: url(../imgs/special.jpg);
-  padding-bottom: 34.71%;
-  background-size: cover;
-  position: relative;
-}
-.container .index .gamer .special .special_pic p {
-  position: absolute;
-  left: 10px;
-  top: 80%;
-  color: white;
-  font-size: 1.8em;
-  font-family: Arial;
-  font-style: italic;
-  font-weight: 600;
-}
-.container .index .gamer .special .word {
-  height: 50px;
-  margin: 10px;
-}
-.container .index .gamer .special .word .name {
-  width: 28%;
-  float: left;
-  margin-left: 10px;
-  border-right: #FFF 1px solid;
-  font-weight: bold;
-}
-.container .index .gamer .special .word .experience {
-  width: 64%;
-  /*font-weight: bold;*/
-  
-  float: right;
-  margin: 5px;
-}
-.container .index .gamer .team {
-  width: 80%;
-  height: 225px;
-  float: right;
-  background: url(../imgs/team_BG.jpg);
-}
-.container .index .gamer .team .team_name {
-  font-weight: bold;
-  /**/
-  
-  width: 75%;
-  margin: 0 auto;
-}
-.container .index .gamer .team .profile {
-  width: 24%;
-  float: left;
-  margin-left: 1%;
-}
-.container .index .gamer .team .profile .pic {
-  width: 30%;
-  float: left;
-}
-.container .index .gamer .team .profile .experience {
-  width: 63%;
-  font-weight: bold;
-  float: right;
-}
+
 .container .hoarding {
   width: 100%;
   height: 300px;
-  padding-top: 5%;
+  padding-top: 3%;
 }
 .container .news {
-  width: 30%;
+  width: 50%;
   float: left;
 }
 .container .news .board {
@@ -419,9 +342,10 @@ body {
   margin: 0 auto;
 }
 .container .news .board li.item_list {
-  border-top: #FFF 1px solid;
-  padding: 3%;
+  border-top: #5E5E5E 1px solid;
+  padding: 1%;
 }
+
 .container .news .board li.item_list:first-child {
   border: 0;
 }
@@ -429,18 +353,17 @@ body {
   font-weight: bold;
 }
 .container .banner {
-  width: 70%;
-  margin-top: -3%;
+  width: 50%;
+  /*margin-top: -3%;*/
   float: right;
 }
-.container .banner .game_logo {
-  width: 20%;
-  height: 50px;
-  margin: 28px auto;
+.container .banner .game_logo {/**/
+  width: 30%;
+  margin: 5% auto 0;
 }
-.container .banner .banner_teams {
-  width: 95%;
-  margin: 0 auto;
+.container .banner .banner_teams {/**/
+  width: 100%;
+  margin: 3% auto;
 }
 .team_A, .team_B {
   width: 48%;
@@ -534,6 +457,8 @@ body {
 }
 /*product*/
 
+
+	
 .container .product {
   width: 100%;
   margin: 0 auto;
@@ -626,6 +551,7 @@ body {
   background-image: url(../imgs/copyright_line.png);
   background-position: center center;
   background-size: 100% auto;
+  /**/  margin-top: 2em;
 }
 /*light box*/
 
@@ -787,7 +713,7 @@ body {
 }
 .btn_scrolldown {
   width: 77px;
-  height: 155px;
+  height: 91px;
   overflow: hidden;
   background: url(../imgs/arr.png) 0 0 no-repeat;
 }
@@ -808,6 +734,29 @@ body {
     width: 100%;
     float: none;
     margin: 0;
+  }
+  
+  .container .index .top .menu li {
+  vertical-align: baseline;
+}
+}
+@media screen and (max-width: 1024px) {
+  .container .section .detail .BG {
+    width: 100%;
+    height: auto;
+    float: none;
+  }
+  .container .section .detail .word {
+    width: 80%;
+  }
+  .container .section .detail .BG_02 {
+    width: 100%;
+    height: auto;
+    float: none;
+  }
+  .container .section .detail .word_02 {
+    width: 80%;
+    float: none;
   }
 }
 @media screen and (max-width: 1024px) {
@@ -879,6 +828,7 @@ body {
     font-size: 0.8em;
   }
 }
+
 @media screen and (max-width: 1024px) {
   .container .section .detail .BG {
     width: 100%;

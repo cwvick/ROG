@@ -1,0 +1,175 @@
+/*GRUBBY*/
+.container .index .gamer {
+  width: 100%;
+  min-height: 290px;
+  background-image:url(../imgs/gamerbg.jpg);
+  background-size: cover;
+  position: relative;
+  /*border-top: #FFF 1px solid;*/
+}
+.wrap-GG{width:100%;}
+.follower {
+ /* width: 100%;*/
+  margin-left: 10px;
+  /*font-weight: bold;*/
+  margin-top:-10px;
+
+}
+
+.experience {
+  width: 100%;
+  /*font-weight: bold;*/
+  
+  /*float: right;*/
+  margin:10px;
+}
+.special {
+  width: 25%;
+  min-height: 290px;
+  background: #000;
+  float: left;
+background: rgba(0,0,0,.8);
+}
+.container .index .gamer .special .special_pic {
+  width: 100%;
+  height: auto;
+  /*background-image: url(../imgs/special.jpg);
+  padding-bottom: 34.71%;*/
+  background-size: cover;
+  position: relative;
+}
+
+
+
+.gurbyName{
+	font-family:Arial;
+  	color: #FFF;
+  	font-size: 1.7em;
+	font-style:italic;
+/*	border-right:1px solid #707070;
+*/	padding :5px;
+	}
+
+.grubyFollower{
+	font-family:  Arial;
+  	color: #FFF;
+  	font-size: 1em;
+	margin:10px 5px 0;
+	}
+
+
+
+.storm{
+  width: 40%;
+  margin: 5px auto -15px;
+  position: absolute;
+  top: -60px;
+  left: 50%;
+  margin-left: -95px;
+  	}
+	.storm img{width:100%}
+.gruby{
+	width:100%;
+	margin-top:50px;
+	}
+	.gruby img{width:100%}
+
+/*GAMERS*/
+
+.team {
+	width: 75%;
+	height: 290px;
+	float: right;
+	background:rgba(0,0,0,0.2);
+}
+
+.file {
+	width: 24.3%;
+	float: left;
+	margin-left: .5%;
+	margin-top: 1.5%;
+}
+
+.gamer-wrap{
+	width:100%;
+	}
+.container .index .gamer .special .word .name {
+  width: 28%;
+  float: left;
+  margin-left: 10px;
+  font-weight: bold;
+}
+.photo{
+	width: 35%;
+	float: left;
+	}
+	.photo img{width:100%}
+	
+.data{
+  width: 60%;
+  float: right;
+  padding-left: 3%;
+	}
+	
+.exper{
+	width:100%;
+	margin-top: 3%;
+	}
+	
+.flag{
+  width: 20%;
+  margin: 5%;
+	}
+	.flag img{width:100%;}
+	
+/*font*/
+
+.text_size_01 { /**/
+  font-family:  Arial;
+  color: #FFF;
+  font-size: 1em;
+/*  -webkit-transform: scale(0.9);
+  -webkit-text-size-adjust: none;
+*/ /* display: inline-block;*/
+  /*margin-left: -5px;*/
+  line-height: 1.4em;
+  *font-family:9px;
+
+}
+
+/*board*/
+
+.tt{
+	font-family: 'batman';
+	color: white;
+	font-size: 4em;
+	text-align: center;	
+	}
+	
+.ii, .ii p{
+	font-family:  Arial;
+	color: #FFF;
+	font-size: 1.1em;
+	line-height: 1.5em;
+
+	}
+/*gear tital*/	
+.tital{
+	width:100%;
+	font-family: 'batman';
+	font-size:8.3em;
+	color:#e10913;
+	text-align:center;
+	margin:1em auto .5em;
+	padding-top: 25px;
+}
+
+@media screen and (max-width: 1400px) {
+.gurbyName {
+  font-size: 1.3em;
+}
+.tital{
+	font-size:6em;
+
+	
+}
