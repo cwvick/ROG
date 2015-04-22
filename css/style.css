@@ -160,16 +160,14 @@ body {
   background-size: cover;
 }
 .container .index .top .menu ul {
-  width: 85%;
+  width: 89%;
   margin: 0 auto;
 }
 .container .index .top .menu li {
   float: left;
-  margin-left: 8%;
+  margin-left: 13.5%;
   text-align: center;
   line-height: 2.5em;
- /* vertical-align: baseline;*/
-  /**/
 }
 .container .index .top .menu li:first-child {
   margin-left: 0;
@@ -507,7 +505,6 @@ body {
   /*word-break: break-all;*/
   margin-top: 15px;
   font-family: 'MyriadProLight';
-  padding-bottom: 25px;
 }
 .container .product .items .button {
   width: 100%;

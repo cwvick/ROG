@@ -7,7 +7,7 @@ firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
 $(function() {
   // Count down
   var setCountdown = function() {
-    var date = new Date('Thu May 07 2015 00:00:00 GMT+0800 (Taipei Standard Time)');
+    var date = new Date('Fri May 01 2015 08:00:00 GMT+0200');
     var size = 28;
     var winWidth = $(window).width();
     
@@ -22,7 +22,8 @@ $(function() {
 
     $('#countdown').timeTo({
       timeTo: date,
-      fontSize: size
+      fontSize: size,
+      displayDays: 2
     });
   };
 
@@ -30,7 +31,7 @@ $(function() {
 
   $(document).on('click', '.btn-menu-buy, .btn-menu-pro', function(event) {
     event.preventDefault();
-    $('body').animate({
+    $('body, html').animate({
       scrollTop: $('.product').offset().top
     },200);
   });
@@ -113,7 +114,7 @@ $(function() {
 
   $(document).on('click', '.scrolldown_container', function(event) {
     event.preventDefault();
-    $('body').animate({
+    $('body, html').animate({
       scrollTop: $('.video').offset().top + $('.video').outerHeight()
     },
     500,
@@ -219,16 +220,17 @@ $(function() {
   bageHandler();
 
   var scrolldownHandler = function() {
-    var bgPosition = parseInt($('.btn_scrolldown').css('background-position-y'));
+    var bgPosition = $('.btn_scrolldown').css('background-position');
+    var bgPositionY = parseInt(bgPosition.split(' ')[1]);
     var updateH = -91;
 
-    if ( bgPosition <= updateH*3 ) {
-      bgPosition = 0;
+    if ( bgPositionY <= updateH*3 ) {
+      bgPositionY = 0;
     } else {
-      bgPosition = bgPosition + updateH;
+      bgPositionY = bgPositionY + updateH;
     }
 
-    $('.btn_scrolldown').css('background-position-y', bgPosition + 'px');
+    $('.btn_scrolldown').css('background-position', '0 ' + bgPositionY + 'px');
   };
 
   var scrolldownTimer = setInterval(function(){ scrolldownHandler(); }, 175);
@@ -256,59 +258,59 @@ $(function() {
       $('body').removeClass('mobile');
     }
 
-    // setProdListHeight();
+    setProdListHeight();
   });
 
-  // var setting_rmHeight = 120;
+  var setting_rmHeight = 120;
 
   // read more for product info
-  // $('.product .list_item .info').readmore({
-  //   collapsedHeight: setting_rmHeight,
-  //   moreLink: '<div class="readmore_container clearfix"><div class="rm_arrow down"></div><a href="#">read more</a></div>',
-  //   lessLink: '<div class="readmore_container clearfix"><div class="rm_arrow up"></div><a href="#">close</a></div>',
-  //   beforeToggle: function(trigger, element, expanded) {
-  //     if(expanded) {
-  //       $(element).css('padding-bottom', 0);
-  //     }
-  //   },
-  //   afterToggle: function(trigger, element, expanded) {
-  //     var maxHeight = $(element).height() + $(element).prev('.model').height();
+  $('.product .list_item .info').readmore({
+    collapsedHeight: setting_rmHeight,
+    moreLink: '<div class="readmore_container clearfix"><a href="#">...(more)</a></div>',
+    lessLink: '<div class="readmore_container clearfix"><div class="rm_arrow up"></div><a href="#">close</a></div>',
+    beforeToggle: function(trigger, element, expanded) {
+      if(expanded) {
+        $(element).css('padding-bottom', 0);
+      }
+    },
+    afterToggle: function(trigger, element, expanded) {
+      var maxHeight = $(element).height() + $(element).prev('.model').height();
 
-  //     $(element).parents('.list').find('li.list_item').each(function(index, el) {
-  //       if ( $(this).find('.info').height() + $(this).find('.model').height() > maxHeight ) {
-  //         maxHeight = $(this).find('.info').height() + $(this).find('.model').height();
-  //       }
-  //     });
+      $(element).parents('.list').find('li.list_item').each(function(index, el) {
+        if ( $(this).find('.info').height() + $(this).find('.model').height() > maxHeight ) {
+          maxHeight = $(this).find('.info').height() + $(this).find('.model').height();
+        }
+      });
 
-  //     $(element).parents('.list').find('.info').each(function(index, el) {
-  //       var selfHeight = $(this).height() + $(this).prev('.model').height();
-  //       if ( $(this).height() > setting_rmHeight && selfHeight < maxHeight ) {
-  //         $(this).next('.readmore_container').css('padding-bottom', maxHeight - selfHeight + 'px');
-  //       }        
-  //     });
+      $(element).parents('.list').find('.info').each(function(index, el) {
+        var selfHeight = $(this).height() + $(this).prev('.model').height();
+        if ( $(this).height() > setting_rmHeight && selfHeight < maxHeight ) {
+          $(this).next('.readmore_container').css('padding-bottom', maxHeight - selfHeight + 'px');
+        }        
+      });
 
-  //     if (!expanded) {
-  //       $(element).css('padding-bottom', 0);
-  //     }
+      if (!expanded) {
+        $(element).css('padding-bottom', 0);
+      }
 
-  //     setProdListHeight();
-  //   }
-  // });
+      setProdListHeight();
+    }
+  });
 
   // product info init
-  // var setProdListHeight = function() {
-  //   $('.product .list li.list_item').height('auto');
+  var setProdListHeight = function() {
+    $('.product .list li.list_item').height('auto');
 
-  //   $('.product .list').each(function(index, el) {
-  //     var minHeight = 0;
-  //     $(this).find('li.list_item').each(function(index, el) {
-  //       if ( $(this).height() > minHeight ) {
-  //         minHeight = $(this).height();
-  //       }
-  //     });
-  //     $(this).find('li.list_item').height(minHeight);
-  //   });
-  // };
+    $('.product .list').each(function(index, el) {
+      var minHeight = 0;
+      $(this).find('li.list_item').each(function(index, el) {
+        if ( $(this).height() > minHeight ) {
+          minHeight = $(this).height();
+        }
+      });
+      $(this).find('li.list_item').height(minHeight);
+    });
+  };
 
   var gamerHeightHandler = function() {
 
