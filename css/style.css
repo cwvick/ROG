@@ -507,6 +507,7 @@ body {
   /*word-break: break-all;*/
   margin-top: 15px;
   font-family: 'MyriadProLight';
+  padding-bottom: 25px;
 }
 .container .product .items .button {
   width: 100%;
