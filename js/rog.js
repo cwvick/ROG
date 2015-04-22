@@ -272,6 +272,10 @@ $(function() {
       if(expanded) {
         $(element).css('padding-bottom', 0);
       }
+
+      if ( internetExplorer9andLess() ) {
+        setTimeout( function() { prodInfoHeight_IE9(element, expanded); }, 50);       
+      }
     },
     afterToggle: function(trigger, element, expanded) {
       var maxHeight = $(element).height() + $(element).prev('.model').height();
@@ -312,6 +316,30 @@ $(function() {
     });
   };
 
+  // read more IE9 issue
+  var prodInfoHeight_IE9 = function(element, expanded) {
+    var maxHeight = $(element).height() + $(element).prev('.model').height();
+
+    $(element).parents('.list').find('li.list_item').each(function(index, el) {
+      if ( $(this).find('.info').height() + $(this).find('.model').height() > maxHeight ) {
+        maxHeight = $(this).find('.info').height() + $(this).find('.model').height();
+      }
+    });
+
+    $(element).parents('.list').find('.info').each(function(index, el) {
+      var selfHeight = $(this).height() + $(this).prev('.model').height();
+      if ( $(this).height() > setting_rmHeight && selfHeight < maxHeight ) {
+        $(this).next('.readmore_container').css('padding-bottom', maxHeight - selfHeight + 'px');
+      }        
+    });
+
+    if (!expanded) {
+      $(element).css('padding-bottom', 0);
+    }
+
+    setProdListHeight();
+  };
+
   var gamerHeightHandler = function() {
 
     var wHeight = $(".special").height();
@@ -319,5 +347,9 @@ $(function() {
   };
 
   gamerHeightHandler();
+
+  var internetExplorer9andLess = function() {
+    return $.browser.msie && (parseFloat($.browser.version) < 10 || parseFloat(document.documentMode) < 10);
+  };
 
 });
