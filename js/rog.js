@@ -259,6 +259,7 @@ $(function() {
     }
 
     setProdListHeight();
+    gamerHeightHandler();
   });
 
   var setting_rmHeight = 120;
@@ -346,10 +347,24 @@ $(function() {
     $(".gamer,.team").height(wHeight);
   };
 
-  gamerHeightHandler();
-
   var internetExplorer9andLess = function() {
     return $.browser.msie && (parseFloat($.browser.version) < 10 || parseFloat(document.documentMode) < 10);
   };
+
+  // Back to top
+  $(window).scroll(function(event) {
+    if ( $(this).scrollTop() >= 400 ) {
+      $('.btn_backtop').show();
+    } else {
+      $('.btn_backtop').hide();
+    }
+  });
+
+  $(document).on('click', '.btn_backtop', function(event) {
+    event.preventDefault();
+    $('body, html').animate({
+      scrollTop: 0
+    },200);
+  });
 
 });

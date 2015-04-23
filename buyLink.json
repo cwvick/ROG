@@ -22,6 +22,18 @@
 			"buyLink" : "http://www.asuspromotion.net/au/wheretobuy/index.htm"
 		}]
 	},{
+		"countryName" : "UK",
+		"storeList" : [{
+			"storeName" : "Amazon",
+			"buyLink" : "http://www.amazon.de/s/ref=sr_nr_p_76_0?fst=as%3Aoff&rh=i%3Aaps%2Ck%3Aasus+g751%2Cp_76%3A419122031&keywords=asus+g751&ie=UTF8&qid=1427201285&rnid=419121031"
+		},{
+			"storeName" : "Currys PC World",
+			"buyLink" : "http://goo.gl/A05wZR"
+		},{
+			"storeName" : "Overclockers",
+			"buyLink" : "http://www.overclockers.co.uk/search_results.php?keywords=asus+g751jy&_=1417101663997"
+		}]
+	},{
 		"countryName" : "TW",
 		"storeList" : [{
 			"storeName" : "PChome",
@@ -140,15 +152,18 @@
 		"storeList" : [{
 			"storeName" : "ASUS",
 			"buyLink" : "http://www.asus.com/us/site/g-series/G501/"
-		},{
-			"storeName" : "prisjakt",
-			"buyLink" : "http://www.prisjakt.nu/search.php?s=g501jw&view=m#prodlista"
 		}]
 	},{
 		"countryName" : "AU",
 		"storeList" : [{
 			"storeName" : "ASUS",
 			"buyLink" : "http://www.asuspromotion.net/au/wheretobuy/index.htm"
+		}]
+	},{
+		"countryName" : "UK",
+		"storeList" : [{
+			"storeName" : "OverClockers",
+			"buyLink" : "http://goo.gl/moChpF"
 		}]
 	},{
 		"countryName" : "SW",
@@ -162,14 +177,26 @@
 	"countryList" : [{
 		"countryName" : "US",
 		"storeList" : [{
-			"storeName" : "ASUS",
-			"buyLink" : "http://www.asus.com/us/Desktops/ROG_G20AJ/"
+			"storeName" : "Bestbuy",
+			"buyLink" : "http://www.bestbuy.com/site/searchpage.jsp?st=asus+rog+g20&_dyncharset=UTF-8&id=pcat17071&type=page&sc=Global&cp=1&nrp=15&sp=&qp=category_facet%3DSAAS~All+Desktops~pcmcat143400050013&list=n&iht=y&usc=All+Categories&ks=960&keys=keys"
+		},{
+			"storeName" : "Amazon",
+			"buyLink" : "http://www.amazon.com/s/ref=nb_sb_noss_2?url=search-alias%3Daps&field-keywords=asus+rog+g20"
 		}]
 	},{
 		"countryName" : "AU",
 		"storeList" : [{
 			"storeName" : "ASUS",
 			"buyLink" : "http://www.asuspromotion.net/au/wheretobuy/index.htm"
+		}]
+	},{
+		"countryName" : "UK",
+		"storeList" : [{
+			"storeName" : "Currys PC World",
+			"buyLink" : "http://goo.gl/rzsyU1"
+		},{
+			"storeName" : "Littlewoods",
+			"buyLink" : "http://goo.gl/Ppchdj"
 		}]
 	},{
 		"countryName" : "DE",
@@ -220,6 +247,18 @@
 },{
 	"productId" : "PG278Q",
 	"countryList" : [{
+		"countryName" : "UK",
+		"storeList" : [{
+			"storeName" : "Overclockers UK",
+			"buyLink" : "https://www.overclockers.co.uk/showproduct.php?prodid=MO-070-AS"
+		},{
+			"storeName" : "Scan",
+			"buyLink" : "http://www.scan.co.uk/products/27-asus-pg278q-rog-swift-g-sync-144hz-gaming-monitor-whqd-displayport-2560x1440-350cd-m2-80m1-1ms-2x"
+		},{
+			"storeName" : "Amazon",
+			"buyLink" : "http://www.scan.co.uk/products/27-asus-pg278q-rog-swift-g-sync-144hz-gaming-monitor-whqd-displayport-2560x1440-350cd-m2-80m1-1ms-2x"
+		}]
+	},{
 		"countryName" : "DE",
 		"storeList" : [{
 			"storeName" : "Amazon",
@@ -244,6 +283,21 @@
 },{
 	"productId" : "VG248QE",
 	"countryList" : [{
+		"countryName" : "UK",
+		"storeList" : [{
+			"storeName" : "eBuyer",
+			"buyLink" : "http://www.ebuyer.com/436992-asus-vg248qe-24-led-lcd-hdmi-monitor-vg248qe"
+		},{
+			"storeName" : "SCAN",
+			"buyLink" : "http://www.scan.co.uk/products/24-asus-vg248qe-led-nvidia-3d-v2-gaming-monitor-144hz-dp-hdmi-dvi-1920x1080-350cd-m2-80m1-1ms-speake"
+		},{
+			"storeName" : "Overclockers UK",
+			"buyLink" : "https://www.overclockers.co.uk/showproduct.php?prodid=MO-053-AS"
+		},{
+			"storeName" : "Amazon",
+			"buyLink" : "http://www.amazon.co.uk/Asus-VG248QE-24-inch-LED-Monitor/dp/B00B19T7QC"
+		}]
+	},{
 		"countryName" : "DE",
 		"storeList" : [{
 			"storeName" : "Amazon",

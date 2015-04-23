@@ -660,7 +660,7 @@ body {
   text-align: center;
 }
 .lightbox .list_wrapper .country_list li, .lightbox .list_wrapper .wallpaper_list li {
-  width: 16%;
+  width: 14%;
   display: inline-block;
   *display: inline;
   zoom: 1;
@@ -718,6 +718,9 @@ body {
 }
 .lightbox .country .country_icon.SW {
   background-position: -465px 0;
+}
+.lightbox .country .country_icon.UK {
+  background-position: -558px 0;
 }
 .lightbox .country .store .name, .lightbox .country .store .variation_name {
   width: 100%;
@@ -873,5 +876,21 @@ body {
 }
 .readmore_container .rm_arrow.up {
   background-position: 0 -15px
+}
+.btn_backtop {
+  position: fixed;
+  z-index: 3;
+  right: 10px;
+  bottom: 20px;
+  cursor: pointer;
+  -webkit-animation: fadein 0.5s;
+  -moz-animation: fadein 0.5s;
+  -o-animation: fadein 0.5s;
+  animation: fadein 0.5s;
+  width: 50px;
+  height: 50px;
+  border: 2px solid #c7161e;
+  background: #000 url(../imgs/icn-backtop.png) no-repeat 50% 50%;
+  display: none;
 }
 
