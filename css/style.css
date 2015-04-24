@@ -219,9 +219,9 @@ body {
 .container .index .top .menu a.btn_02:hover {
 	background-position:-113px -35px;
 }
-/*.container .index .top .menu a.btn_03:hover {
+.container .index .top .menu a.btn_03:hover {
 	background-position:-269px -35px;
-}*/
+}
 .container .index .top .social_media {
   width: 15%;
   height: auto;
@@ -363,7 +363,7 @@ body {
   padding-top: 3%;
 }
 .container .news {
-  width: 43%;
+  width: 57%;
   float: left;
 }
 .container .news .board {
@@ -390,7 +390,7 @@ body {
   font-weight: bold;
 }
 .container .banner {
-	width: 55%;
+	width: 40%;
   /* margin-top: -3%; */
   float: right;
   border-radius: 10px;

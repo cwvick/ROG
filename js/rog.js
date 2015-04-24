@@ -36,11 +36,11 @@ $(function() {
     },200);
   });
 
-  // $(document).on('click', '.btn-menu-download', function(event) {
-  //   event.preventDefault();
-  //   $('.lightbox-wrapper').height($(window).height());
-  //   $('.lightbox.download').show();
-  // });
+  $(document).on('click', '.btn-menu-download', function(event) {
+    event.preventDefault();
+    $('.lightbox-wrapper').height($(window).height());
+    $('.lightbox.download').show();
+  });
 
   $(document).on('click', '.btn-buy', function(event) {
     event.preventDefault();

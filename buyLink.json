@@ -160,6 +160,12 @@
 			"buyLink" : "http://www.asuspromotion.net/au/wheretobuy/index.htm"
 		}]
 	},{
+		"countryName" : "TW",
+		"storeList" : [{
+			"storeName" : "YAHOO",
+			"buyLink" : "https://tw.buy.yahoo.com/gdsale/gdsale.asp?act=gdsearch&gdid=5833650"
+		}]
+	},{
 		"countryName" : "UK",
 		"storeList" : [{
 			"storeName" : "OverClockers",
@@ -320,6 +326,114 @@
 		"storeList" : [{
 			"storeName" : "Asus",
 			"buyLink" : "http://www.asus.com/tw/Notebooks_Ultrabooks/GL552JX/wheretobuy/"
+		},{
+			"storeName" : "PChome",
+			"buyLink" : "http://24h.pchome.com.tw/prod/DHAFBL-A90060JJZ/"
+		},{
+			"storeName" : "YAHOO",
+			"buyLink" : "https://tw.buy.yahoo.com/gdsale/gdsale.asp?act=gdsearch&gdid=5833444"
+		}]
+	}]
+},{
+	"productId" : "G551",
+	"countryList" : [{
+		"countryName" : "US",
+		"storeList" : [{
+			"storeName" : "ASUS",
+			"variations" : [{
+				"name" : "GL551",
+				"buyLink" : "http://www.asus.com/us/site/g-series/GL551/"
+			},{
+				"name" : "GL771",
+				"buyLink" : "http://www.asus.com/us/site/g-series/GL771/"
+			}]
+		}]
+	},{
+		"countryName" : "UK",
+		"storeList" : [{
+			"storeName" : "Amazon",
+			"variations" : [{
+				"name" : "G551",
+				"buyLink" : "http://goo.gl/yAhdLY"
+			}]
+		},{
+			"storeName" : "eBuyer",
+			"variations" : [{
+				"name" : "G551",
+				"buyLink" : "http://goo.gl/R0UzfE"
+			}]
+		},{
+			"storeName" : "Very",
+			"variations" : [{
+				"name" : "G551",
+				"buyLink" : "http://goo.gl/wZgppT"
+			}]
+		},{
+			"storeName" : "Currys PC World",
+			"variations" : [{
+				"name" : "G771",
+				"buyLink" : "http://goo.gl/KlkAuN"
+			}]
+		}]
+	},{
+		"countryName" : "TW",
+		"storeList" : [{
+			"storeName" : "PChome",
+			"variations" : [{
+				"name" : "G551",
+				"buyLink" : "http://24h.pchome.com.tw/prod/DHAFAU-A9005YLUZ"
+			}]
+		},{
+			"storeName" : "YAHOO",
+			"variations" : [{
+				"name" : "G551",
+				"buyLink" : "https://tw.buy.yahoo.com/gdsale/gdsale.asp?act=gdsearch&gdid=5783959"
+			}]
+		}]
+	},{
+		"countryName" : "DE",
+		"storeList" : [{
+			"storeName" : "Amazon",
+			"variations" : [{
+				"name" : "GL551",
+				"buyLink" : "http://www.amazon.de/s/ref=sr_nr_n_1?fst=as%3Aoff&rh=n%3A427957031%2Ck%3Aasus+gl551%2Cp_89%3AASUS+Computer&keywords=asus+gl551&ie=UTF8&qid=1429781003&rnid=1703609031"
+			}]
+		},{
+			"storeName" : "Cyberport",
+			"variations" : [{
+				"name" : "GL551",
+				"buyLink" : "https://www.cyberport.de/?token=c6ac929a7c20f342705aa87bba5c7b9b&sSearchId=5538b91634ca1&EVENT=itemsearch&view=liste&query=gl551&searchbutton.x=0&searchbutton.y=0&filterkategorie="
+			}]
+		},{
+			"storeName" : "Notebooksbilliger.de",
+			"variations" : [{
+				"name" : "GL551",
+				"buyLink" : "http://www.notebooksbilliger.de/produkte/gl551"
+			}]
+		},{
+			"storeName" : "Media Markt",
+			"variations" : [{
+				"name" : "GL551",
+				"buyLink" : "http://www.mediamarkt.de/webapp/wcs/stores/servlet/MultiChannelSearch?storeId=48353&langId=-3&searchProfile=onlineshop&channel=mmdede&searchParams=&path=&query=ASUS+gl551"
+			}]
+		},{
+			"storeName" : "Saturn",
+			"variations" : [{
+				"name" : "GL551",
+				"buyLink" : "http://www.saturn.de/webapp/wcs/stores/servlet/MultiChannelSearch?storeId=48352&langId=-3&searchProfile=onlineshop&channel=sedede&searchParams=&path=&query=ASUS+GL551"
+			}]
+		}]
+	},{
+		"countryName" : "SW",
+		"storeList" : [{
+			"storeName" : "Prisjakt",
+			"variations" : [{
+				"name" : "G551",
+				"buyLink" : "http://www.prisjakt.nu/search.php?s=asus+g551&view=m#prodlista"
+			},{
+				"name" : "G771",
+				"buyLink" : "http://www.prisjakt.nu/search.php?s=asus+g771&view=m#prodlista"
+			}]
 		}]
 	}]
 }]
