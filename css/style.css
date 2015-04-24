@@ -270,7 +270,7 @@ body {
   top: 9%;
   visibility: hidden;
 }
-.container .index .screen .video .play {} .container .index .movie {
+.container .index .movie {
   width: 100%;
   height: auto;
   min-height: 180px;
@@ -278,6 +278,7 @@ body {
   padding-bottom: 1%;
   background-repeat: repeat-x;
   background-size: cover;
+  display: none;
 }
 .container .index .movie .movie_list {
   width: 90%;
