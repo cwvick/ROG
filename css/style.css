@@ -76,12 +76,10 @@ body {
 }
 /**/
 
-.text_size_04 {
-  font-family: "square721bt", Arial;
-  color: #FFF;
-  font-size: 1.5em;
-  font-weight: bold;
-  line-height: 1.5em;
+.video_name {
+  overflow: hidden;
+  height: 1.5em;
+  word-break: break-all;
 }
 .container .index .ROG_LOGO {
   width: 223px;
