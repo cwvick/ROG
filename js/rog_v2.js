@@ -5,6 +5,9 @@
 // firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
 
 $(function() {
+  // video list init
+  getVideoList();
+
   // Count down
   var setCountdown = function() {
     var date = new Date('Fri May 01 2015 08:00:00 GMT+0200');
@@ -353,5 +356,85 @@ $(function() {
       scrollTop: 0
     },200);
   });
+
+  function getVideoList() {
+    $('.movie_list ul').empty();
+    $('.container .index .movie').hide();
+
+    $.ajax({
+      url: 'videos.csv',
+    })
+    .done(function(data) {
+      var videoList = JSON.parse(CSV2JSON(data));
+      var content = '';
+
+      $.each(videoList, function(index, video) {
+        var isShow = (!video.isShow || video.isShow == 'Y') && (!video.displayDate || compareDate(video.displayDate));
+
+        if ( isShow ) {
+          if ( video.videoType && video.videoId ) {
+            var vName = video.videoName ? video.videoName : '';
+            var vDate = video.videoDate ? video.videoDate : '';
+            var vImage = video.thumbnailImage ? video.thumbnailImage : 'vThumbnail_01.jpg';
+            var vType = video.videoType.toLowerCase();
+
+            content += '<li class="frame" data-type="' + vType + '" data-video-id="' + video.videoId + '">' +
+                          '<div class="thumbnail">' +
+                            '<img src="imgs/video-thumbnails/' + vImage + '">' +
+                          '</div>' +
+                          '<div class="play_wrapper">' +
+                            '<div class="btn_play"></div>' +
+                          '</div>' +
+                          '<div class="text_wrapper">' +
+                            '<div class="text_size_04 video_name">' + vName + '</div>' +
+                            '<div class="video_date">' + vDate + '</div>' +
+                          '</div>' +
+                        '</li>';
+          }
+        }
+      });
+
+      if ( content.length > 0 ) {
+        $('.movie_list ul').html(content);
+        $('.container .index .movie').show();
+      }
+
+      if ( !$('.movie_list li:first').hasClass('selected') ) {
+        $('.movie_list li:first').trigger('click');
+      }
+    })
+    .fail(function() {
+      console.log("error");
+    });
+  }
+
+  var compareDate = function(dateString) {
+    var now = new Date().toUTCString();
+    var nowTime = new Date(now).getTime();
+    var date = new Date(dateString+ ' GMT+0200').toUTCString();
+    var dateTime = new Date(date).getTime();
+
+    if ( dateTime <= nowTime ) {
+      return true;
+    } else {
+      return false;
+    }
+  };
+
+  // var getVideoId = function(videoId, videoUrl) {
+  //   var video_id;
+  //   if () {
+
+  //   }
+  //   var video_id = uri.split('v=')[1];
+  //   if ( video_id ) {
+  //     var ampersandPosition = video_id.indexOf('&');
+  //     if(ampersandPosition != -1) {
+  //       video_id = video_id.substring(0, ampersandPosition);
+  //     } 
+  //   } else {
+  //     video_id = uri.split('embed/')[1];
+  //   }
+  // };
 
 });
