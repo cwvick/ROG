@@ -40,6 +40,7 @@ $(function() {
     event.preventDefault();
     $('.lightbox-wrapper').height($(window).height());
     $('.lightbox.download').show();
+    $('.screen .video').css('visibility', 'hidden');
   });
 
   $(document).on('click', '.btn-buy', function(event) {
@@ -60,6 +61,7 @@ $(function() {
       $('.country_list li').css('height', $('.country_list').height());
       $('.lightbox-wrapper').height($(window).height());
       $('.lightbox.toBuy').css('visibility', 'visible');
+      $('.screen .video').css('visibility', 'hidden');
     }
   });
 
@@ -99,6 +101,7 @@ $(function() {
   $(document).on('click', '.lightbox .close', function(event) {
     event.preventDefault();
     $('.lightbox').hide();
+    $('.screen .video').css('visibility', 'visible');
   });
 
   $(document).on('click', '.movie_list li', function(event) {
