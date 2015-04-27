@@ -278,7 +278,7 @@ body {
   padding-bottom: 1%;
   background-repeat: repeat-x;
   background-size: cover;
-  display: none;
+  /*display: none;*/
 }
 .container .index .movie .movie_list {
   width: 90%;
