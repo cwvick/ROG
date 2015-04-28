@@ -115,6 +115,7 @@ $(function() {
 
       var video_type = $(this).data('type');
       var video_id = $(this).data('video-id');
+      var video_channel = $(this).data('video-channel');
 
       $('#video_player').empty();
       $('.video').css('visibility', 'hidden');
@@ -122,7 +123,7 @@ $(function() {
       if ( video_type == 'youtube' ) {
         loadVideo(video_id);
       } else if ( video_type == 'twitch' ) {
-        playTwitch(video_id);
+        playTwitch(video_id, video_channel);
       }   
     }
   });
@@ -146,12 +147,20 @@ $(function() {
     $('.screen .video').css('visibility', 'visible');
   };
 
-  var playTwitch = function(video_id) {
-    var twitchObj = '<object bgcolor="#000000" data="http://www.twitch.tv/swflibs/TwitchPlayer.swf" height="' + $('.screen .video').outerHeight() + '"  width="' + $('.screen .video').outerWidth() + '" id="clip_embed_player_flash" type="application/x-shockwave-flash"><param name="movie" value="http://www.twitch.tv/swflibs/TwitchPlayer.swf" /><param name="allowScriptAccess" value="always" /><param name="allowNetworking" value="all" /><param name="allowFullScreen" value="true" /><param name="flashvars" value="channel=esl_heroes&amp;auto_play=false&amp;start_volume=25&amp;videoId=v' + video_id + '&amp;device_id=8a4b98c5339d86c3" /></object>';
-    
-    $('#video_player').html(twitchObj);
+  var playTwitch = function(video_id, video_channel) {
+    var twitchObj = '';
 
-    $('.screen .video').css('visibility', 'visible');
+    if ( !video_id && video_channel ) {
+      twitchObj = '<iframe src="http://www.twitch.tv/' + video_channel + '/embed" frameborder="0" scrolling="no" height="' + $('.screen .video').outerHeight() + '" width="' + $('.screen .video').outerWidth() + '"></iframe>';
+    } else if ( video_id && video_channel ) {
+      twitchObj = '<object bgcolor="#000000" data="http://www.twitch.tv/swflibs/TwitchPlayer.swf" height="' + $('.screen .video').outerHeight() + '"  width="' + $('.screen .video').outerWidth() + '" id="clip_embed_player_flash" type="application/x-shockwave-flash"><param name="movie" value="http://www.twitch.tv/swflibs/TwitchPlayer.swf" /><param name="allowScriptAccess" value="always" /><param name="allowNetworking" value="all" /><param name="allowFullScreen" value="true" /><param name="flashvars" value="channel=' + video_channel + '&amp;auto_play=false&amp;start_volume=25&amp;videoId=v' + video_id + '&amp;device_id=8a4b98c5339d86c3" /></object>';
+    }
+    
+    if (twitchObj) {
+      $('#video_player').html(twitchObj);
+      $('.screen .video').css('visibility', 'visible');
+    }
+    
   };
 
   // Load the first video
@@ -367,18 +376,16 @@ $(function() {
     .done(function(data) {
       var videoList = JSON.parse(CSV2JSON(data));
       var content = '';
-
       $.each(videoList, function(index, video) {
         var isShow = (!video.isShow || video.isShow == 'Y') && (!video.displayDate || compareDate(video.displayDate));
-
         if ( isShow ) {
-          if ( video.videoType && video.videoId ) {
+          if ( video.videoType ) {
             var vName = video.videoName ? video.videoName : '';
             var vDate = video.videoDate ? video.videoDate : '';
             var vImage = video.thumbnailImage ? video.thumbnailImage : 'vThumbnail_01.jpg';
             var vType = video.videoType.toLowerCase();
 
-            content += '<li class="frame" data-type="' + vType + '" data-video-id="' + video.videoId + '">' +
+            content += '<li class="frame" data-type="' + vType + '" data-video-id="' + video.videoId + '" data-video-channel="' + video.videoChannel + '">' +
                           '<div class="thumbnail">' +
                             '<img src="imgs/video-thumbnails/' + vImage + '">' +
                           '</div>' +
