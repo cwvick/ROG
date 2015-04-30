@@ -378,6 +378,7 @@ $(function() {
     .done(function(data) {
       var videoList = JSON.parse(CSV2JSON(data));
       var content = '';
+      var count = 0;
       $.each(videoList, function(index, video) {
         var isShow = (!video.isShow || video.isShow == 'Y') && (!video.displayDate || compareDate(video.displayDate));
         if ( isShow ) {
@@ -397,6 +398,7 @@ $(function() {
                             '<div class="video_date">' + vDate + '</div>' +
                           '</div>' +
                         '</li>';
+            count++;
           }
         }
       });
@@ -404,6 +406,11 @@ $(function() {
       if ( content.length > 0 ) {
         $('.movie_list ul').html(content);
         $('.container .index .movie').show();
+
+        if ( count >= 6 ) {
+          $('.movie_list ul li').css('margin', '0 20px');
+          setVideoCarousel();
+        }
       }
 
       if ( !$('.movie_list li:first').hasClass('selected') ) {
@@ -414,6 +421,26 @@ $(function() {
       console.log("error: setVideoList");
     });
   }
+
+  // Video list carousel
+  var setVideoCarousel = function() {
+    $('.movie_list ul').carouFredSel({
+      responsive  : true,
+      scroll      : 1,
+      items       : {
+        visible     : 6,
+        height      : "90%"
+      },
+      infinite: false,
+      auto    : false,
+      prev    : {
+        button  : ".video_arrow.prev"
+      },
+      next    : {
+        button  : ".video_arrow.next"
+      }
+    });
+  };
 
   var compareDate = function(dateString) {
     var now = new Date().toUTCString();
@@ -455,14 +482,12 @@ $(function() {
       });
 
       if ( content.length > 0 ) {
-        console.log('count= '+count);
         $('.album_list').html(content);
         $('.album_wrapper').show();
+
         if ( count >= 6 ) {
           $('.album_list li').css('margin', '0 20px');
           setAlbumCarousel();
-        } else {
-
         }
       }
 
@@ -484,12 +509,10 @@ $(function() {
       infinite: false,
       auto    : false,
       prev    : {
-        button  : ".album_arrow.prev",
-        key     : "left"
+        button  : ".album_arrow.prev"
       },
       next    : {
-        button  : ".album_arrow.next",
-        key     : "right"
+        button  : ".album_arrow.next"
       }
     });
   };
