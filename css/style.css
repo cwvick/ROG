@@ -232,7 +232,7 @@ body {
   height: auto;
   min-height: 180px;
   background-image: url(../imgs/movie_BG.jpg);
-  padding-bottom: 1%;
+  /*padding-bottom: 1%;*/
   background-repeat: repeat-x;
   background-size: cover;
 }
@@ -268,7 +268,7 @@ body {
   overflow: hidden;
   position: absolute;
   background: url(../imgs/movie_play_01.png) center center no-repeat;
-  top: 0;
+  top: -20px;
   left: 0;
 }
 .container .index .movie .movie_list li:hover .thumbnail .btn_play, .container .index .movie .movie_list li.selected .thumbnail .btn_play {
@@ -820,7 +820,7 @@ body {
   width: 90%;
   height: auto;
   margin: 0 auto;
-  padding: 40px 0;
+  padding: 40px 0 35px;
 }
 .album_wrapper .album_list {
   min-height: 120px;
