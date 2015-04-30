@@ -6,7 +6,9 @@
 
 $(function() {
   // video list init
-  getVideoList();
+  setVideoList();
+  // album list init
+  setAlbumList();
 
   // Count down
   var setCountdown = function() {
@@ -186,7 +188,7 @@ $(function() {
 
   var setBuyLinkData = function() {
   	$.ajax({
-      url: 'buyLink.json'
+      url: 'data/buyLink.json?v=' + new Date().getTime()
     })
     .done(function(data) {
       $.each(data, function(index, obj) {
@@ -366,12 +368,12 @@ $(function() {
     },200);
   });
 
-  function getVideoList() {
+  function setVideoList() {
     $('.movie_list ul').empty();
     $('.container .index .movie').hide();
 
     $.ajax({
-      url: 'videos.csv',
+      url: 'data/videos.csv?v=' + new Date().getTime()
     })
     .done(function(data) {
       var videoList = JSON.parse(CSV2JSON(data));
@@ -388,8 +390,6 @@ $(function() {
             content += '<li class="frame" data-type="' + vType + '" data-video-id="' + video.videoId + '" data-video-channel="' + video.videoChannel + '">' +
                           '<div class="thumbnail">' +
                             '<img src="imgs/video-thumbnails/' + vImage + '">' +
-                          '</div>' +
-                          '<div class="play_wrapper">' +
                             '<div class="btn_play"></div>' +
                           '</div>' +
                           '<div class="text_wrapper">' +
@@ -411,7 +411,7 @@ $(function() {
       }
     })
     .fail(function() {
-      console.log("error");
+      console.log("error: setVideoList");
     });
   }
 
@@ -426,6 +426,111 @@ $(function() {
     } else {
       return false;
     }
+  };
+
+  function setAlbumList() {
+    $('.album_list').empty();
+    $('.album_wrapper').hide();
+
+    $.ajax({
+      url: 'data/album_list.csv?v=' + new Date().getTime()
+    })
+    .done(function(data) {
+      var count = 0;
+      var albumList = JSON.parse(CSV2JSON(data));
+      var content = '';
+      $.each(albumList, function(index, album) {
+        var isShow = !album.isShow || video.isShow == 'Y';
+        if ( isShow ) {
+          if ( album.albumNo ) {
+            content += '<li data-index="' + album.albumNo + '">' +
+                          '<div class="album_img">' +
+                            '<img src="imgs/albums/album-covers/' + album.albumCover + '">' +
+                          '</div>' +
+                          '<div class="album_date">' + album.albumDate + '</div>' +
+                        '</li>';
+            count++;
+          }
+        }
+      });
+
+      if ( content.length > 0 ) {
+        console.log('count= '+count);
+        $('.album_list').html(content);
+        $('.album_wrapper').show();
+        if ( count >= 6 ) {
+          $('.album_list li').css('margin', '0 20px');
+          setAlbumCarousel();
+        } else {
+
+        }
+      }
+
+    })
+    .fail(function() {
+      console.log("error: setAlbumList");
+    });
+  }
+
+  // Album list carousel
+  var setAlbumCarousel = function() {
+    $('.album_list').carouFredSel({
+      responsive  : true,
+      scroll      : 1,
+      items       : {
+        visible     : 6,
+        height      : "70%"
+      },
+      infinite: false,
+      auto    : false,
+      prev    : {
+        button  : ".album_arrow.prev",
+        key     : "left"
+      },
+      next    : {
+        button  : ".album_arrow.next",
+        key     : "right"
+      }
+    });
+  };
+
+  $(document).on('click', '.album_list li', function(event) {
+    event.preventDefault();
+    $('.lightbox-wrapper').height($(window).height());
+    setPhotoList($(this).data('index'));
+    $('.screen .video').css('visibility', 'hidden');
+  });
+
+  var setPhotoList = function( album_index ) {
+    $('.photobox_list').empty();
+    $('.lightbox.photobox').hide();
+
+    $.ajax({
+      url: 'data/photo_list.csv?v=' + new Date().getTime()
+    })
+    .done(function(data) {
+      var photoList = JSON.parse(CSV2JSON(data));
+      var content = '';
+      $.each(photoList, function(index, photo) {
+        var isShow = !photo.isShow || photo.isShow == 'Y';
+        if ( isShow ) {
+          if ( photo.albumNo && photo.albumNo == album_index ) {
+            content += '<li>' +
+                          '<img src="imgs/albums/' + photo.albumNo + '/' + photo.photoUrl + '">' +
+                        '</li>';
+          }
+        }
+      });
+
+      if ( content.length > 0 ) {
+        $('.photobox_list').html(content);
+        $('.lightbox.photobox').show();
+      }
+
+    })
+    .fail(function() {
+      console.log("error: setPhotoList");
+    });
   };
 
   // var getVideoId = function(videoId, videoUrl) {
@@ -443,5 +548,26 @@ $(function() {
   //     video_id = uri.split('embed/')[1];
   //   }
   // };
+
+  // Album list carousel
+  // $('.album_list').carouFredSel({
+  //   responsive  : true,
+  //   scroll      : 1,
+  //   items       : {
+  //     visible     : 6
+  //   },
+  //   infinite: false,
+  //   auto    : false,
+  //   prev    : {
+  //     button  : ".album_arrow.prev",
+  //     key     : "left"
+  //   },
+  //   next    : {
+  //     button  : ".album_arrow.next",
+  //     key     : "right"
+  //   }
+  // });
+
+  // var get
 
 });

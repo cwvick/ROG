@@ -289,12 +289,12 @@ body {
 }
 .container .index .movie .movie_list li {
   width: 12.5%;
-  height: 120px;
+  /*min-height: 120px;*/
   float: left;
   /*display: inline-block;
   *display: inline;
   zoom: 1;*/  
-  background: #FFF;
+  /*background: #FFF;*/
   margin-left: 5%;
   position: relative;
   cursor: pointer;
@@ -303,37 +303,40 @@ body {
   margin-left: 0;
 }
 .container .index .movie .movie_list li .thumbnail {
-  width: 100%;
-  height: 100%;
+  /*width: 100%;*/
+  /*height: 100%;*/
   overflow: hidden;
-  background: #000;
+  /*background: #000;*/
   text-align: center;
 }
 .container .index .movie .movie_list li .thumbnail img {
   width: 100%;
 }
-.container .index .movie .movie_list li .play_wrapper {
+/*.container .index .movie .movie_list li .play_wrapper {
   width: 100%;
   height: 48px;
   position: absolute;
   top: 36px;
-}
-.container .index .movie .movie_list li .play_wrapper .btn_play {
-  width: 48px;
-  height: 48px;
+}*/
+.container .index .movie .movie_list li .thumbnail .btn_play {
+  width: 100%;
+  height: 100%;
   overflow: hidden;
-  margin: 0 auto;
-  background: url(../imgs/movie_play.png);
+  position: absolute;
+  background: url(../imgs/movie_play_01.png) center center no-repeat;
+  top: 0;
+  left: 0;
 }
-.container .index .movie .movie_list li:hover .play_wrapper .btn_play, .container .index .movie .movie_list li.selected .play_wrapper .btn_play {
-  background-position: -48px 0;
+.container .index .movie .movie_list li:hover .thumbnail .btn_play, .container .index .movie .movie_list li.selected .thumbnail .btn_play {
+  background: url(../imgs/movie_play_02.png) center center no-repeat;
 }
 .container .index .movie .movie_list li .text_wrapper {
-  width: 100%;
-  position: absolute;
+  /*width: 100%;
+  position: absolute;*/
   /*在影片字的位置(置中或靠左)*/
   /*text-align: center;*/ 
-  bottom: -3.5em;
+  /*bottom: -3.5em;*/
+  margin-top: 5px;
   color: #fff;
 }
 /*.container .index .movie .movie_list .movie_play {
@@ -892,4 +895,58 @@ body {
   background: #000 url(../imgs/icn-backtop.png) no-repeat 50% 50%;
   display: none;
 }
-
+.album_wrapper { 
+  overflow: hidden;
+  /*min-height: 180px;*/
+}
+.album_container {
+  position: relative;
+  width: 90%;
+  height: auto;
+  margin: 0 auto;
+  padding: 40px 0;
+}
+.album_wrapper .album_list {
+  min-height: 120px;
+}
+.album_list li {
+  width: 12.5%;
+  min-height: 120px;
+  float: left;
+  margin-left: 5%;
+  cursor: pointer;
+  color: #fff;
+}
+.album_list li:first-child {
+  margin-left: 0;
+}
+.album_list li .album_img {
+  width: 100%;
+  /*height: 100%;*/
+  overflow: hidden;
+  background: #000;
+  text-align: center;
+} 
+.album_list li .album_img img {
+  width: 100%;
+}
+.album_list li .album_date {
+  margin-top: 10px;
+}
+.album_wrapper .album_arrow {
+  width: 64px;
+  height: 64px;
+  overflow: hidden;
+  position: absolute;
+  top: 73px;
+  cursor: pointer;
+  display: none;
+}
+.album_wrapper .album_arrow.prev {
+  background: url(../imgs/arrow_left.png) no-repeat;
+  left: -64px;
+}
+.album_wrapper .album_arrow.next {
+  background: url(../imgs/arrow_right.png) no-repeat;
+  right: -64px;
+}
