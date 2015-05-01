@@ -28,7 +28,8 @@ $(function() {
     $('#countdown').timeTo({
       timeTo: date,
       fontSize: size,
-      displayDays: 2
+      displayDays: 2,
+      start: false
     });
   };
 
