@@ -866,3 +866,7 @@ body {
   background: url(../imgs/arrow_right.png) no-repeat;
   right: -64px;
 }
+.photobox_list {
+  max-height: 395px;
+  overflow-y: scroll;
+}
